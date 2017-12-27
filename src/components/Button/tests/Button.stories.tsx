@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { SampleWidget } from './widget';
+import { Button } from '../../Button';
 
 import { storiesOf } from '@storybook/react';
 
-storiesOf('TypeScript and Storybook', module)
-    .add('Sample Widget', () => <SampleWidget name = 'Michael' />);
+storiesOf('Button', module).add('Button with label in Child', () => <Button>Label</Button>);
