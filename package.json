@@ -4,7 +4,8 @@
   "description": "This plugin will provide ui components for bootstrap theme. Components are registered in bluerain context.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/BlueEastCode/bluerain-plugin-bootstrap#readme",
   "devDependencies": {
+    "@storybook/react": "^3.3.1",
     "@types/jest": "^21.1.0",
     "@types/node": "^8.0.0",
     "colors": "^1.1.2",
@@ -52,6 +54,12 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.5.0",
-    "bootstrap": "^4.0.0-beta.2"
+    "@storybook/addon-info": "^3.3.1",
+    "@storybook/addon-knobs": "^3.3.1",
+    "bootstrap": "4.0.0-beta.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.4.0",
+    "storybook-addon-rtl": "^0.1.1"
   }
 }
