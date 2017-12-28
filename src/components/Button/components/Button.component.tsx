@@ -7,9 +7,9 @@ import IButton from '@blueeast/bluerain-ui-interfaces/Components/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-const Button = (ibutton: IButton) => {
+const Button = (iButton: IButton) => {
     return (
-        <button className="btn-primary">{ibutton.children}</button>);
+        <button type="button" className="btn btn-primary">{iButton.children}</button>);
 
 }
 
