@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/BlueEastCode/bluerain-plugin-bootstrap#readme",
   "devDependencies": {
-	"@blueeast/tslint-config-blueeast": "^0.5.1",
+    "@blueeast/tslint-config-blueeast": "^0.5.1",
     "@storybook/addon-storyshots": "^3.2.17",
     "@types/jest": "^21.1.8",
     "@types/react-dom": "^16.0.3",
@@ -63,16 +63,17 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.5.0",
+    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/Button",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
-    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/Button",
     "bootstrap": "4.0.0-beta.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-intl": "^2.4.0",
+    "reactstrap": "^5.0.0-alpha.4",
     "storybook-addon-rtl": "^0.1.1"
   },
-"jest": {
+  "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },

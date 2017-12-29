@@ -4,13 +4,23 @@
 
 import * as React from 'react';
 import IButton from '@blueeast/bluerain-ui-interfaces/Components/Button';
-import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from 'reactstrap';
 
-
-const Button = (iButton: IButton) => {
+const BlueRainButton = (props: IButton) => {
+    if(props.iconLeft){
+        return (
+            <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} {...props}>{props.iconLeft} {props.children}</Button>
+        );
+    }
+    else if(props.iconRight){
+        return (
+            <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} {...props}>{props.children} {props.iconRight}</Button>
+        );
+    }
     return (
-        <button type="button" className="btn btn-primary">{iButton.children}</button>);
+        <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} {...props}>{props.children}</Button>
+    );
 
 }
 
-export default Button;
+export default BlueRainButton;
