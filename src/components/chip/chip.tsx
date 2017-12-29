@@ -11,8 +11,8 @@ import { IChip } from '@blueeast/bluerain-ui-interfaces/Components/Chip';
  * @param {string} props.style Get the style object
  * @param {string} props.children Content of the Chip
  */
-const ChipBluerain = (props: IChip) => {
+const Chip = (props: IChip) => {
     return (<Badge style={{...props.style}} pill color="primary">{props.children}</Badge>);
 
 };
-export default ChipBluerain;
+export default Chip;
