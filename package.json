@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc",
     "test": "jest",
-    "lint": "tslint $(find . -name '*.ts' ! -ipath '*node_modules*')",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts' 'src/**/*.tsx'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

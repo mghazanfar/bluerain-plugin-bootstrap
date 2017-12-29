@@ -13,7 +13,7 @@ class BootstrapPlugin extends Plugin {
 	static pluginName = 'BootstrapPlugin';
 	static slug = 'bootstrap';
 
-	static initialize(config = {}, ctx:bluerain) {
+	static initialize(config:any = {}, ctx:bluerain) {
 
 		let theme = ctx.Configs.get('theme');
 		if (!theme) {
