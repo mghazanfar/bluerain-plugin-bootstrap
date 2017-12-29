@@ -1,3 +1,6 @@
+/**
+ * Created by Ghazal Taimur on 12/27/17.
+ */
 import * as React from 'react';
 import Chip from './chip';
 import { storiesOf } from '@storybook/react';
