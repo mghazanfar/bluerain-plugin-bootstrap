@@ -7,7 +7,7 @@ import { storiesOf } from '@storybook/react';
 
 const stories = storiesOf('Chip', module);
 stories.add('Chip with default value', () => {
-    return <Chip color='primary'>9 % off</Chip>;
+    return <Chip>9 % off</Chip>;
 });
 
 stories.add('Chip with style', () => {
