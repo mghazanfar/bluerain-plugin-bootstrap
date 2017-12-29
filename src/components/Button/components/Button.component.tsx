@@ -9,7 +9,7 @@ import { Button } from 'reactstrap';
 const BlueRainButton = (props: IButton) => {
     if(props.iconLeft){
         return (
-            <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} {...props}>{props.iconLeft} {props.children}</Button>
+            <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.iconLeft} {props.children}</Button>
         );
     }
     else if(props.iconRight){
@@ -18,7 +18,7 @@ const BlueRainButton = (props: IButton) => {
         );
     }
     return (
-        <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} {...props}>{props.children}</Button>
+        <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.children}</Button>
     );
 
 }

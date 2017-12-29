@@ -13,7 +13,7 @@ storiesOf('Button', module).add('Dark Button with label in Child', () => <Button
 
 storiesOf('Button', module).add('Default Button without Text tag in Child', () => <Button>Default</Button>);
 
-storiesOf('Button', module).add('Secondary Button with style prop', () => <Button color="secondary" style={{height:50}} >style height:50</Button>);
+storiesOf('Button', module).add('Secondary Button with style prop', () => <Button color="secondary" style={{backgroundColor:'purple', borderColor:'purple'}} >Customm Purple</Button>);
 
 storiesOf('Button', module).add('Light Button with onClick prop', () => <Button color="light" onClick={()=>{console.log('I was clicked')}} >onClick</Button>);
 
@@ -36,3 +36,7 @@ storiesOf('Button', module).add('Warning Button with iconLeft prop', () => <Butt
 storiesOf('Button', module).add('Info Button with iconRight prop', () => <Button color="info" iconRight={<img src="https://getbootstrap.com/assets/img/bootstrap-stack.png" width="15" height="15"/>} >Icon Right</Button>);
 
 storiesOf('Button', module).add('Secondary Button with fab prop', () => <Button color="warning" fab>FAB</Button>);
+
+storiesOf('Button', module).add('Danger Button with large prop true', () => <Button color="danger" large>Large</Button>);
+
+storiesOf('Button', module).add('Success Button with small prop true', () => <Button color="success" small>Small</Button>);
