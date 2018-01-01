@@ -59,13 +59,17 @@
     "tslint": "^5.8.0",
     "typedoc": "^0.9.0",
     "typescript": "^2.3.4",
-    "validate-commit-msg": "^2.12.2"
+    "validate-commit-msg": "^2.12.2",
+    "storybook-addon-intl": "^2.1.2",
+    "react-test-renderer": "^16.0.0"
   },
   "dependencies": {
-    "@blueeast/bluerain-os": "^0.5.0",
+    "@blueeast/bluerain-os": "^0.4.8",
     "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/chip-interfaces",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
     "bootstrap": "4.0.0-beta.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -87,6 +91,12 @@
       "tsx",
       "js",
       "json"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**.{tsx}",
+      "!src/**.stories.tsx"
     ]
   }
 }
