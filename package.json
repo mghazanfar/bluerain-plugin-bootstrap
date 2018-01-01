@@ -93,10 +93,6 @@
       "json"
     ],
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**.{tsx}",
-      "!src/**.stories.tsx"
-    ]
+    "collectCoverage": true
   }
 }

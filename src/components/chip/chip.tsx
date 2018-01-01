@@ -9,6 +9,8 @@ import { IChip } from '@blueeast/bluerain-ui-interfaces/Components/Chip';
  * The props of Chip Component
  * @param {string} props.style Get the style object
  * @param {string} props.children Content of the Chip
+ * The specific library props of Chip Component
+ * @param {string} props.color The color of the Chip
  */
 
 export interface IChipProps {
