@@ -16,8 +16,9 @@ import { IChip } from '@blueeast/bluerain-ui-interfaces/Components/Chip';
 export interface IChipProps {
     color?: string;
 }
-const Chip = (props: IChip & IChipProps) => {
-    return (<Badge style={{...props.style}} pill color={props.color} {...props}>{props.children}</Badge>);
-
-};
-export default Chip;
+class Chip extends React.Component<IChip & IChipProps, {}> {
+    render() {
+      return (<Badge style={{...this.props.style}} pill color={this.props.color} {...this.props}>{this.props.children}</Badge>);
+    }
+}
+ export default Chip;
