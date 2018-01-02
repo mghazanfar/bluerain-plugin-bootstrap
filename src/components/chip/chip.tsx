@@ -1,7 +1,7 @@
 /**
  * Created by Ghazal Taimur on 12/29/17.
  */
-import * as React from 'react';
+import React from 'react';
 import { Badge } from 'reactstrap';
 import { IChip } from '@blueeast/bluerain-ui-interfaces/Components/Chip';
 
@@ -16,9 +16,7 @@ import { IChip } from '@blueeast/bluerain-ui-interfaces/Components/Chip';
 export interface IChipProps {
     color?: string;
 }
-class Chip extends React.Component<IChip & IChipProps, {}> {
-    render() {
-      return (<Badge style={{...this.props.style}} pill color={this.props.color} {...this.props}>{this.props.children}</Badge>);
-    }
-}
- export default Chip;
+
+const Chip = (props: IChip & IChipProps) =>
+    (<Badge style={{...props.style}} pill color={props.color} {...props}>{props.children}</Badge>);
+export default Chip;
