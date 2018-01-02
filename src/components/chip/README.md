@@ -17,7 +17,7 @@
 
 ```JavaScript
 import React from 'react';
-import Chip from  'dukaan-ui/Chip';
+import Chip from  'bluerain-plugin-bootstrap/Chip';
 
 const ChipSample = () => (
        <Chip style={{'color':'white','background-color':'green'}}>10 % off</Chip>
@@ -30,7 +30,7 @@ export default ChipSample;
 
 - 1st story of the Chip component in chip.stories.tsx file is written for Chip with default value.
 - 2nd story of the Chip component in chip.stories.tsx file is written for Chip with knobs and prop "style".
-- 3rd story of the Chip component in chip.stories.tsx file is written for Chip without knobs and prop "style" , "onClick".
+- 3rd story of the Chip component in chip.stories.tsx file is written for Chip without knobs and prop.
 
 ## Tests
 
