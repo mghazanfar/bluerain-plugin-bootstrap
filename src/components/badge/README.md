@@ -5,7 +5,7 @@
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
 | style | Object |  | Get the style object |
-| children | ReactNode | | Content of the Badge |
+| badgeContent | ReactNode | | Content of the Badge |
 
 ## Specific Library Props
 
@@ -17,10 +17,10 @@
 
 ```JavaScript
 import React from 'react';
-import Chip from  'dukaan-ui/Chip';
+import Badge from  'dukaan-ui/Badge';
 
 const BadgeSample = () => (
-       <Badge style={{'color':'white','background-color':'green'}}/>
+       <Badge badgeContent={123} style={{'color':'white','background-color':'green'}}/>
 );
 
 export default BadgeSample;
