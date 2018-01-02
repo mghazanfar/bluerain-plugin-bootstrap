@@ -15,7 +15,7 @@ stories.add('Badge with default value', () => {
 stories.add('Badge with style', () => {
     // const styleProps = {'background-color': backgroundColor};
     const style = object('Style of Badge',BadgeDefaultStyle);
-    const content = text('Text', '10 % off');
+    const content = text('Text', '007');
     return <BadgeUi badgeContent={content} style={style}/>;
 });
 
