@@ -1,8 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { create } from 'react-test-renderer';
-import  BR  from '@blueeast/bluerain-os';
 import Chip from '../src/components/chip/chip';
-BR.boot({renderApp:false});
 
 test('Chip component with default values', () => {
   const chip = create(
