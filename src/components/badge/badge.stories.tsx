@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import BadgeUi from './index';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';

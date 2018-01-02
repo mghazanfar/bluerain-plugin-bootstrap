@@ -17,7 +17,7 @@
 
 ```JavaScript
 import React from 'react';
-import Badge from  'dukaan-ui/Badge';
+import Badge from  'bluerain-plugin-bootstrap/Badge';
 
 const BadgeSample = () => (
        <Badge badgeContent={123} style={{'color':'white','background-color':'green'}}/>

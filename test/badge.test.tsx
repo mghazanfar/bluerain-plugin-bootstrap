@@ -1,8 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { create } from 'react-test-renderer';
-import  BR  from '@blueeast/bluerain-os';
 import Badge from '../src/components/badge/badge';
-BR.boot({renderApp:false});
 
 test('Badge component with default values', () => {
     const badge = create(
