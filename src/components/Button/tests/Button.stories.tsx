@@ -2,6 +2,8 @@ import * as React from 'react';
 import Button from '../../Button';
 import BR from '@blueeast/bluerain-os';
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 
 BR.boot({renderApp:false})
 
@@ -9,6 +11,21 @@ const Text = BR.Components.get('Text');
 
 const Image = BR.Components.get('Image');
 
+const label = text('label as child', 'with knobs');
+const disabled = boolean('disabled', false);
+const fullWidth = boolean('fullWidth', false);
+const small = boolean('small', false);
+storiesOf('Button', module).add('Primary Button with knobs', () => 
+
+<Button
+    color={'primary'}
+    onClick={action('I was clicked with knobs')}
+    disabled={disabled}
+    fullWidth={fullWidth}
+    small={small}
+    >
+{label}
+</Button>);
 storiesOf('Button', module).add('Dark Button with label in Child', () => <Button color="dark"><Text>Dark</Text></Button>);
 
 storiesOf('Button', module).add('Default Button without Text tag in Child', () => <Button>Default</Button>);

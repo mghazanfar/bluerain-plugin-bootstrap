@@ -24,7 +24,12 @@ import { Button } from 'reactstrap';
  * @param {boolean} props.large if true, large button is generated.
  */
 
-const BlueRainButton = (props: IButton) => {
+ export interface BSProps {
+ tag?: Function | string | undefined,
+ size?: string,
+ }
+ 
+const BlueRainButton = (props: IButton & BSProps) => {
     if(props.iconLeft){
         return (
             <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.iconLeft} {props.children}</Button>
