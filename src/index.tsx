@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
+import Chip from './components/chip';
 
 
 /**
@@ -19,7 +20,9 @@ class BootstrapPlugin extends Plugin {
 		if (!theme) {
 			theme = {};
 		}
+        ctx.Components.register('Chip', Chip);
 	}
+
 }
 
 export default BootstrapPlugin;

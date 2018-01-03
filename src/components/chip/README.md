@@ -17,13 +17,15 @@
 
 ```JavaScript
 import React from 'react';
-import Chip from  'bluerain-plugin-bootstrap/Chip';
+import { withBluerain } from "@blueeast/bluerain-os";
 
-const ChipSample = () => (
-       <Chip style={{'color':'white','background-color':'green'}}>10 % off</Chip>
+const ChipSample = (props) => (
+    const BR = props.bluerain;
+    const Chip = BR.Components.get('Chip');
+    <Chip style={{'color':'white','background-color':'green'}}>10 % off</Chip>
 );
 
-export default ChipSample;
+export default withBluerain(ChipSample);
 ```
 
 ## Storybook
