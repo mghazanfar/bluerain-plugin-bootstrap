@@ -17,13 +17,14 @@
 
 ```JavaScript
 import React from 'react';
-import Badge from  'bluerain-plugin-bootstrap/Badge';
+import { withBluerain } from '@blueeast/bluerain-os';
 
-const BadgeSample = () => (
-       <Badge badgeContent={123} style={{'color':'white','background-color':'green'}}/>
-);
+const BadgeSample = (props) => (
+    const BR = props.bluerain;
+    const Badge = BR.Components.get('Badge');
+    <BadgeUi badgeContent={'1'} color="primary"/>);
 
-export default BadgeSample;
+export default withBluerain(BadgeSample);
 ```
 
 ## Storybook
