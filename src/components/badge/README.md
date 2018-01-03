@@ -21,7 +21,7 @@ import { withBluerain } from '@blueeast/bluerain-os';
 
 const BadgeSample = (props) => (
     const BR = props.bluerain;
-    const Badge = BR.Components.get('Badge');
+    const BadgeUi = BR.Components.get('BadgeUi');
     <BadgeUi badgeContent={'1'} color="primary"/>);
 
 export default withBluerain(BadgeSample);
