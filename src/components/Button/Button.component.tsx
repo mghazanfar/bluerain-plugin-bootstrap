@@ -8,7 +8,7 @@ import { Button } from 'reactstrap';
 
 
 /**
- * The props of Breadcrumb Component
+ * The props of Button Component
  * @param {Node} props.children Label to be passed as child.
  * @param {Object} props.style style object for button's style.
  * @param {enum} props.color color prop of type enum. Default color is 'primary'.
