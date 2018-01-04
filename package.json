@@ -44,6 +44,7 @@
     "husky": "^0.14.0",
     "jest": "^22.0.4",
     "lint-staged": "^6.0.0",
+    "react-gmaps": "^1.5.0",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
@@ -65,7 +66,7 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.4.8",
-    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/chip-interfaces",
+    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
     "@storybook/addon-actions": "^3.2.6",
