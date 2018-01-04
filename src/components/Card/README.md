@@ -78,15 +78,17 @@ import { withBluerain } from "@blueeast/bluerain-os";
 const myCard = (props) => {
     const BR = props.bluerain;
     const Card = BR.Components.get('Card');
+    const CardMedia = BR.Components.get('CardMedia');
+    const CardBody = BR.Components.get('CardBody');
     return (
-    <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+    <Card style={{width:300}} >
+        <CardMedia top src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" />
         <CardBody>
-          <CardTitle>Card Title</CardTitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <CardText>
+          <h2>Card Title</CardTih2tle>
+          <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p>
             <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText>
+          </p>
         </CardBody>
     </Card>
     );
