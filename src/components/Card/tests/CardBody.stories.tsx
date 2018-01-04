@@ -8,17 +8,17 @@ import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 BR.boot({renderApp:false})
 
 
-storiesOf('CardBody', module).add('CardBody with className prop', () => 
+storiesOf('CardBody', module).add('CardBody with className prop', () =>
 <CardBody
-className='cardBody'
+className="cardBody"
     />);
 
-storiesOf('CardBody', module).add('CardMedia with style prop', () => 
+storiesOf('CardBody', module).add('CardMedia with style prop', () =>
 <CardBody
 style={{width:200, height: 200}}
     />);
 
-storiesOf('CardBody', module).add('CardMedia with children prop', () => 
+storiesOf('CardBody', module).add('CardMedia with children prop', () =>
 <CardBody>
 Hello
     </CardBody>);

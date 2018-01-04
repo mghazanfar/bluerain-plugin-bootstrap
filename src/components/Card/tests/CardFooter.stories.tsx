@@ -8,15 +8,15 @@ import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 BR.boot({renderApp:false})
 
 
-storiesOf('CardFooter', module).add('CardFooter with className prop', () => 
+storiesOf('CardFooter', module).add('CardFooter with className prop', () =>
 <CardFooter
-className='bg-footer'
+className="bg-footer"
     />);
 
-storiesOf('CardFooter', module).add('CardFooter with style prop', () => 
+storiesOf('CardFooter', module).add('CardFooter with style prop', () =>
 <CardFooter
 style={{width:200, height:30}}
     />);
 
-storiesOf('CardFooter', module).add('CardFooter with children prop', () => 
+storiesOf('CardFooter', module).add('CardFooter with children prop', () =>
 <CardFooter>Hello</CardFooter>);

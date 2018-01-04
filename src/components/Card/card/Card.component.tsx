@@ -16,20 +16,20 @@ import { Card } from 'reactstrap';
  */
 
  /**
- * Platform specific props
- * @param {string} props.color background color of the card.
- * @param {boolean} props.inverse If true, turns text color of card into white.
- * @param {boolean} props.body If true, card is generated with body specific styling.
- */
+  * Platform specific props
+  * @param {string} props.color background color of the card.
+  * @param {boolean} props.inverse If true, turns text color of card into white.
+  * @param {boolean} props.body If true, card is generated with body specific styling.
+  */
 
- export interface BSProps {
+ export interface IBSProps {
  color?: string,
  inverse?: boolean,
  body?: boolean,
  }
- 
-const BlueRainCard = (props: ICard & BSProps) => {
-    const raisedFalse = Object.assign({}, props.style, {border:0});
+
+const BlueRainCard = (props: ICard & IBSProps) => {
+    const raisedFalse = {...props.style, border:0};
     return (
         <Card
         {...props}
@@ -41,6 +41,6 @@ const BlueRainCard = (props: ICard & BSProps) => {
         </Card>
     );
 
-}
+};
 
 export default BlueRainCard;
