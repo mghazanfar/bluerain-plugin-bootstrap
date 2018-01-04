@@ -1,6 +1,7 @@
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import BadgeUi from './components/badge';
+import MapComponent from './components/map';
 
 
 /**
@@ -20,6 +21,7 @@ class BootstrapPlugin extends Plugin {
             theme = {};
         }
         ctx.Components.register('BadgeUi', BadgeUi);
+        ctx.Components.register('MapComponent', MapComponent);
     }
 }
 
