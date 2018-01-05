@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import Chip from './components/chip';
+import BadgeUi from './components/badge';
 
 
 /**
@@ -21,8 +21,8 @@ class BootstrapPlugin extends Plugin {
 			theme = {};
 		}
         ctx.Components.register('Chip', Chip);
-	}
-
+        ctx.Components.register('BadgeUi', BadgeUi);
+    }
 }
 
 export default BootstrapPlugin;

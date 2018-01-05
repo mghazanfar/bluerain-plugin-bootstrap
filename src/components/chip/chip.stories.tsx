@@ -14,7 +14,7 @@ stories.add('Chip with default value', () => {
 });
 
 stories.add('Chip with style', () => {
-   // const styleProps = {'background-color': backgroundColor};
+    // const styleProps = {'background-color': backgroundColor};
     const style = object('Style of Chip',chipDefaultStyle);
     const content = text('Text', '10 % off');
     return <Chip style={style}>{content}</Chip>;
