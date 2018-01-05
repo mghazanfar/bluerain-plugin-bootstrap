@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DropDown from './DropDown';
+import DropDown from '../DropDown';
 import { Label} from 'reactstrap';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
