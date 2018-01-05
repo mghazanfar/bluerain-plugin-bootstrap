@@ -40,7 +40,6 @@ stories.add('Map with draggable(Knobs)', () => {
             <IntlProvider>
                 <MapComponent
                     draggable={draggable}
-                    region={{ latitude: 31.3892751, longitude: 74.1502481 }}
                 />
             </IntlProvider>
         </BlueRainProvider>);

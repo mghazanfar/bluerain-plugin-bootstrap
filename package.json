@@ -66,7 +66,7 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.4.8",
-    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git",
+    "bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
     "@storybook/addon-actions": "^3.2.6",
