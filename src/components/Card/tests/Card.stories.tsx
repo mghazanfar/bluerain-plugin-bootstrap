@@ -38,6 +38,7 @@ storiesOf('Card', module).add('Card with inverse prop false tag Card', () =>
     color="dark"
     body
     style={{maxWidth:100}}
+    tag="Card"
     >
 Inverse turned text into White, tag is Card and Max width 100 in style prop
 </Card>);

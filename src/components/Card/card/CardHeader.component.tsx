@@ -15,7 +15,7 @@ import { CardHeader } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
- 
+
 const BlueRainCardHeader = (props: ICardHeader) => {
     return (
         <CardHeader
@@ -25,6 +25,6 @@ const BlueRainCardHeader = (props: ICardHeader) => {
         </CardHeader>
     );
 
-}
+};
 
 export default BlueRainCardHeader;

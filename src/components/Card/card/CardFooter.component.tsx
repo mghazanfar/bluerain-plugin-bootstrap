@@ -13,15 +13,15 @@ import { CardFooter } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
- 
 const BlueRainCardFooter = (props: ICardFooter) => {
     return (
-        <CardFooter 
-        {...props}>
+        <CardFooter
+            {...props}
+        >
         {props.children}
         </CardFooter>
     );
 
-}
+};
 
 export default BlueRainCardFooter;

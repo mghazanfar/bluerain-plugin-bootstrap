@@ -13,15 +13,14 @@ import { CardBody } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
- 
+
 const BlueRainCardBody = (props: ICardBody) => {
     return (
-        <CardBody 
+        <CardBody
         {...props}>
         {props.children}
         </CardBody>
     );
-
-}
+};
 
 export default BlueRainCardBody;
