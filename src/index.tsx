@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
-
-
+import TextInput from './components/TextInput';
 /**
  * Bootstrap Plugin
  * @property {string} pluginName "BootstrapPlugin"
@@ -15,6 +13,7 @@ class BootstrapPlugin extends Plugin {
 
 	static initialize(config = {}, ctx:bluerain) {
 
+		ctx.Components.register('TextInput', TextInput);
 		let theme = ctx.Configs.get('theme');
 		if (!theme) {
 			theme = {};

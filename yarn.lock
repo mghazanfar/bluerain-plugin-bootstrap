@@ -46,9 +46,9 @@
     react-scripts-ts "^2.8.0"
     redux "^3.7.2"
 
-"@blueeast/bluerain-ui-interfaces@https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/Card":
+"@blueeast/bluerain-ui-interfaces@https://github.com/BlueEastCode/bluerain-ui-interfaces.git#master":
   version "1.0.0"
-  resolved "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#59f00abbd31fd33e735f6a9eaee1a438e4cc333d"
+  resolved "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#a35aaab00e53f4f0404f2342c27713bbe2f26aea"
   dependencies:
     "@blueeast/tslint-config-blueeast" "^0.5.1"
     "@types/react" "^16.0.29"
