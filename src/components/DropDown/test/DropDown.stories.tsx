@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DropDown, DropDownItem, DropDownToggle,DropDownMenu } from './DropDown';
+import {DropDown, DropDownItem, DropDownToggle,DropDownMenu } from '../DropDown';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
