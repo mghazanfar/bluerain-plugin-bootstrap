@@ -1,7 +1,7 @@
 {
   "name": "@blueeast/bluerain-plugin-bootstrap",
   "version": "0.1.0",
-  "description": "A Bluerain plugin that integrates reactstrap bootstrap ui",
+  "description": "A Bluerain plugin that implements bluerain ui interfaces based on reactstrap bootstrap ui framework",
   "keywords": [],
   "main": "dist/bluerain-plugin-bootstrap.umd.js",
   "module": "dist/bluerain-plugin-bootstrap.es5.js",
