@@ -27,7 +27,6 @@
 | style | Object | | style object for CardHeader. |
 | children | Node | | Children of CardHeader component. |
 | title | Node | | title of the CardHeader.|
-| tag | string or func | div | Tag with which the Component will be rendered i.e. h1,p and b etc. |
 | className | string |  | className for styling component with css. |
 
 # CardMedia
@@ -38,7 +37,6 @@
 |:-----|:-----|:--------|:------------|
 | style | Object |  | style object for CardMedia. |
 | src | string |  | src for the CardMedia.|
-| tag | string or func | img | Tag with which the Component will be rendered. |
 | className | string |  | className for styling component with css. |
 
 ## Specific Library Props
