@@ -11,8 +11,7 @@ const onDragEnd = (e) => {
     const { latLng } = e;
     const latitude = latLng.lat();
     const longitude = latLng.lng();
-    console.log('latitude and Longitude', latitude, longitude);
-    alert('Latitude and longitude on console');
+    alert('Latitude and longitude');
 };
 stories.add('Map with OnMarkDragEnd(withKnobs)', () => {
     const draggable = boolean('draggable', true);

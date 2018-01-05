@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gmaps, Marker } from 'react-gmaps';
-import  { IMap } from 'bluerain-ui-interfaces/Components/Map';
+import  { IMap } from '@blueeast/bluerain-ui-interfaces/Components/Map';
 
 
 /**
