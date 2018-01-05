@@ -11,7 +11,7 @@ const style = { background: 'red' };
 const textFieldClasses = 'margin-left: 100px; margin-right: 100px; width: 50px; background-color: red; padding:100px;';
 
 storiesOf('TextInput', module).add('with placeholder, default value, onChange',
-    () => <Form> <FormGroup> <TextInput placeholder="hello" defaultValue="nooo" onChange={handleTextInputChange}  autoFocus={true} /> </FormGroup></Form>) ;
+    () => <Form> <FormGroup> <TextInput placeholder="hello" defaultValue="nooo" onChange={handleTextInputChange} autoFocus={true} /> </FormGroup></Form>) ;
 
 storiesOf('TextInput', module).add('with type= textarea',
     () => <Form> <FormGroup> <TextInput placeholder="Multiline Text area" onChange={handleTextInputChange} multiline={true}  /> </FormGroup></Form>) ;
