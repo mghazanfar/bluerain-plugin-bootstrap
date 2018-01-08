@@ -23,7 +23,7 @@ export interface IReactstarpDropDown {
     // For Dropdown usage inside a Navbar (disables popper)
     inNavbar?: boolean,
     tag?: string, // default: 'div' unless nav=true, then 'li'
-    toggle?: (e)=>void
+    toggle?: (e:any)=>void
 }
 /**
  * The props of IReactstarpDropDownToggel Component
