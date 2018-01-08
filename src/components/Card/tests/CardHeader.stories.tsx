@@ -17,14 +17,7 @@ storiesOf('CardHeader', module).add('CardHeader with title prop', () =>
 title="Title"
     />);
 
-storiesOf('CardHeader', module).add('CardHeader with tag and title props', () =>
-<CardHeader
-title="Title"
-tag={()=>'h2'}
-    />);
-
-storiesOf('CardHeader', module).add('CardHeader with tag and Node as title props', () =>
+storiesOf('CardHeader', module).add('CardHeader Node as title props', () =>
 <CardHeader
 title={<h1>Header</h1>}
-tag={()=>'h2'}
     />);
