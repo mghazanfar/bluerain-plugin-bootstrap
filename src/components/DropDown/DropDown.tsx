@@ -13,7 +13,7 @@ import { IPicker } from '@blueeast/bluerain-ui-interfaces/Components/Picker';
  * @param {string} props.tag  default: 'div' unless nav=true, then 'li'.
  * @param {function} props.toggle callback function for toggle .
  */
-interface IReactstarpDropDown {
+export interface IReactstarpDropDown {
     disabled?: boolean,
     dropup?: boolean,
     group?: boolean,
@@ -37,7 +37,7 @@ interface IReactstarpDropDown {
  * @param {boolean} props.navFor Dropdown usage inside a Nav.
  * @param {any} props.tag default: 'div' unless nav=true, then 'li'.
  */
-interface IReactstarpDropDownToggel {
+export interface IReactstarpDropDownToggel {
     caret?: boolean,
     color?: boolean,
     className?: boolean,
@@ -59,7 +59,7 @@ interface IReactstarpDropDownToggel {
  * @param {string} props.className for styles.
  * @param {object} props.cssModule for styles .
  */
-interface IReactstarpDropdownMenu {
+export interface IReactstarpDropdownMenu {
     tag?: string,
     right?: boolean,
     flip?: boolean, // default: true,
@@ -79,7 +79,7 @@ interface IReactstarpDropdownMenu {
  * @param {string} props.className for styles.
  * @param {object} props.cssModule for styles .
  */
-interface IReactstarpDropdownItem {
+export interface IReactstarpDropdownItem {
     active?: boolean,
     disabled?: boolean,
     divider?: boolean,
@@ -111,5 +111,5 @@ const DropDownMenu=(props:IPicker & IReactstarpDropdownMenu)=> {
     );
 };
 export {
-    DropDown, DropDownItem, DropDownToggle,DropDownMenu
+     DropDown,DropDownMenu,DropDownToggle,DropDownItem
 };
