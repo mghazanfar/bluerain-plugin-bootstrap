@@ -31,29 +31,29 @@ stories.add('Map with OnMarkDragEnd(withKnobs)', () => {
                 />
             </IntlProvider>
         </BlueRainProvider>);
-// });
-// stories.add('Map with draggable(Knobs)', () => {
-//     const draggable = boolean('draggable', false);
-//     return (
-//         <BlueRainProvider>
-//             <IntlProvider>
-//                 <MapComponent
-//                     draggable={draggable}
-//                     region={{ latitude: 31.3892751, longitude: 74.1502481 }}
-//                 />
-//             </IntlProvider>
-//         </BlueRainProvider>);
-// });
+});
+stories.add('Map with draggable(Knobs)', () => {
+    const draggable = boolean('draggable', false);
+    return (
+        <BlueRainProvider>
+            <IntlProvider>
+                <MapComponent
+                    draggable={draggable}
+                    region={{ latitude: 31.3892751, longitude: 74.1502481 }}
+                />
+            </IntlProvider>
+        </BlueRainProvider>);
+});
 
-// stories.add('Map with zooming(Knobs)', () => {
-//     const zoom = number('zoom', 12);
-//     return (
-//         <BlueRainProvider>
-//             <IntlProvider>
-//                 <MapComponent
-//                     zoom={zoom}
-//                     region={{ latitude: 31.3892751, longitude: 74.1502481 }}
-//                 />
-//             </IntlProvider>
-//         </BlueRainProvider>);
-// });
+stories.add('Map with zooming(Knobs)', () => {
+    const zoom = number('zoom', 12);
+    return (
+        <BlueRainProvider>
+            <IntlProvider>
+                <MapComponent
+                    zoom={zoom}
+                    region={{ latitude: 31.3892751, longitude: 74.1502481 }}
+                />
+            </IntlProvider>
+        </BlueRainProvider>);
+});
