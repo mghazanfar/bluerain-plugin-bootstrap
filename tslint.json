@@ -5,6 +5,7 @@
     "max-line-length": [true, 440],
     "no-var-requires": false,
     "no-submodule-imports" : false,
-    "no-console": false
+    "no-console": false,
+    "no-unused-variable": true
   }
 }
