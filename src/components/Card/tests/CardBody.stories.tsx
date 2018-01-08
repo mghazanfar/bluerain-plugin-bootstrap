@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 
-BR.boot({renderApp:false})
+BR.boot({renderApp:false});
 
 
 storiesOf('CardBody', module).add('CardBody with className prop', () =>
