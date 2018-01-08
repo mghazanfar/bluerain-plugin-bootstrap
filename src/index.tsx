@@ -1,8 +1,7 @@
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import BadgeUi from './components/badge';
-
-
+import TextInput from './components/TextInput';
 /**
  * Bootstrap Plugin
  * @property {string} pluginName "BootstrapPlugin"
@@ -20,6 +19,7 @@ class BootstrapPlugin extends Plugin {
             theme = {};
         }
         ctx.Components.register('BadgeUi', BadgeUi);
+		ctx.Components.register('TextInput', TextInput);
     }
 }
 
