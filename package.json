@@ -3,11 +3,27 @@
   "version": "1.0.0",
   "description": "This plugin will provide ui components for bootstrap theme. Components are registered in bluerain context.",
   "main": "index.js",
+  "module": "dist/bluerain-plugin-bootstrap.es5.js",
+  "typings": "dist/types/bluerain-plugin-bootstrap.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "compile": "tsc",
-    "test": "jest",
-    "lint": "tslint $(find . -name '*.ts' ! -ipath '*node_modules*')",
-    "storybook": "start-storybook -p 6006",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src",
+    "start": "tsc -w & rollup -c rollup.config.ts -w",
+    "test": "jest --u",
+    "test:watch": "jest --watch",
+    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
+    "precommit": "lint-staged",
+    "debug": "node --debug-brk --inspect ./node_modules/jest/bin/jest -i",
+    "storybook": "start-storybook -p 6016",
     "build-storybook": "build-storybook"
   },
   "repository": {
@@ -20,6 +36,12 @@
     "ui",
     "components"
   ],
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write --use-tabs --single-quote",
+      "git add"
+    ]
+  },
   "author": "BlueEast Team",
   "license": "ISC",
   "bugs": {
