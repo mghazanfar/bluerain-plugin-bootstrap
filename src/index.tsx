@@ -4,6 +4,7 @@ import Chip from './components/chip';
 import BadgeUi from './components/badge';
 import TextInput from './components/TextInput';
 import MapComponent from './components/map';
+import Card from './components/Card';
 
 
 /**
@@ -26,6 +27,7 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.register('TextInput', TextInput);
         ctx.Components.register('BadgeUi', BadgeUi);
         ctx.Components.register('MapComponent', MapComponent);
+        ctx.Components.register('Card', Card);
     }
 }
 
