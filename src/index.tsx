@@ -4,6 +4,9 @@ import Chip from './components/chip';
 import BadgeUi from './components/badge';
 import TextInput from './components/TextInput';
 import MapComponent from './components/map';
+import Avatar from './components/avatar';
+import Button from './components/Button';
+import Dropdown from './components/DropDown';
 import Card, {CardHeader, CardMedia, CardBody, CardFooter} from './components/Card';
 
 
@@ -24,14 +27,18 @@ class BootstrapPlugin extends Plugin {
 			theme = {};
 		}
         ctx.Components.register('Chip', Chip);
+        ctx.Components.register('Avatar', Avatar);
+        ctx.Components.register('Button', Button);
         ctx.Components.register('TextInput', TextInput);
         ctx.Components.register('BadgeUi', BadgeUi);
+        ctx.Components.register('Dropdown', Dropdown);
         ctx.Components.register('MapComponent', MapComponent);
         ctx.Components.register('Card', Card);
-        ctx.Components.register('Card', CardHeader);
-        ctx.Components.register('Card', CardMedia);
-        ctx.Components.register('Card', CardBody);
-        ctx.Components.register('Card', CardFooter);
+        ctx.Components.register('CardHeader', CardHeader);
+        ctx.Components.register('CardMedia', CardMedia);
+        ctx.Components.register('CardBody', CardBody);
+        ctx.Components.register('CardFooter', CardFooter);
+        ctx.Components.register('Avatar', Avatar);
     }
 }
 
