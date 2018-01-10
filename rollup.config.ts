@@ -1,11 +1,11 @@
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import sourceMaps from 'rollup-plugin-sourcemaps'
-import camelCase from 'lodash.camelcase'
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import sourceMaps from 'rollup-plugin-sourcemaps';
+import camelCase from 'lodash.camelcase';
 
-const pkg = require('./package.json')
+const pkg = require('./package.json');
 
-const libraryName = 'bluerain-plugin-bootstrap'
+const libraryName = 'bluerain-plugin-bootstrap';
 
 export default {
   input: `compiled/${libraryName}.js`,
@@ -30,4 +30,4 @@ export default {
     // Resolve source maps to the original source
     sourceMaps(),
   ],
-}
+};
