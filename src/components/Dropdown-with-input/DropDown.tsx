@@ -15,7 +15,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
  * @param {object} props.cssModule for styles .
  * @param {object} props.valid for for validation .
  */
-interface DropDown {
+export interface IDropDown {
     type?:string,
     size?:string,
     bsSize?: string,
@@ -27,7 +27,7 @@ interface DropDown {
     className?: string,
     cssModule?: object,
 }
-const DropDown=(props:IPicker & DropDown)=> {
+const DropDown=(props:IPicker & IDropDown)=> {
         return (
                 <Input {...props} />
         );

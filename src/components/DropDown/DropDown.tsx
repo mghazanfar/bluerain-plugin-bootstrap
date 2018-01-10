@@ -8,22 +8,22 @@ import { IPicker } from '@blueeast/bluerain-ui-interfaces/Components/Picker';
  * @param {boolean} props.dropup dgroup the component.
  * @param {boolean} props.group group the component.
  * @param {boolean} props.isOpen return true if open.
- * @param {boolean} props.nav For Dropdown usage inside a Nav.
- * @param {boolean} props.inNavbar For Dropdown usage inside a Navbar (disables popper)
+ * @param {boolean} props.nav For Dropdown-with-input usage inside a Nav.
+ * @param {boolean} props.inNavbar For Dropdown-with-input usage inside a Navbar (disables popper)
  * @param {string} props.tag  default: 'div' unless nav=true, then 'li'.
  * @param {function} props.toggle callback function for toggle .
  */
-interface IReactstarpDropDown {
+export interface IReactstarpDropDown {
     disabled?: boolean,
     dropup?: boolean,
     group?: boolean,
     isOpen?: boolean,
-    // For Dropdown usage inside a Nav
+    // For Dropdown-with-input usage inside a Nav
     nav?: boolean,
-    // For Dropdown usage inside a Navbar (disables popper)
+    // For Dropdown-with-input usage inside a Navbar (disables popper)
     inNavbar?: boolean,
     tag?: string, // default: 'div' unless nav=true, then 'li'
-    toggle?: (e)=>void
+    toggle?: (e:any)=>void
 }
 /**
  * The props of IReactstarpDropDownToggel Component
@@ -34,10 +34,10 @@ interface IReactstarpDropDown {
  * @param {boolean} props.onClick callback function for click.
  * @param {boolean} props.'data-toggle' for data-toggle
  * @param {boolean} props.'aria-haspopup' for aria-haspopup.
- * @param {boolean} props.navFor Dropdown usage inside a Nav.
+ * @param {boolean} props.navFor Dropdown-with-input usage inside a Nav.
  * @param {any} props.tag default: 'div' unless nav=true, then 'li'.
  */
-interface IReactstarpDropDownToggel {
+export interface IReactstarpDropDownToggel {
     caret?: boolean,
     color?: boolean,
     className?: boolean,
@@ -59,7 +59,7 @@ interface IReactstarpDropDownToggel {
  * @param {string} props.className for styles.
  * @param {object} props.cssModule for styles .
  */
-interface IReactstarpDropdownMenu {
+export interface IReactstarpDropdownMenu {
     tag?: string,
     right?: boolean,
     flip?: boolean, // default: true,
@@ -79,7 +79,7 @@ interface IReactstarpDropdownMenu {
  * @param {string} props.className for styles.
  * @param {object} props.cssModule for styles .
  */
-interface IReactstarpDropdownItem {
+export interface IReactstarpDropdownItem {
     active?: boolean,
     disabled?: boolean,
     divider?: boolean,

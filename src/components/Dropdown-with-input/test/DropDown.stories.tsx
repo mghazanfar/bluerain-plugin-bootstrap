@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 
-const stories = storiesOf('Dropdown', module);
+const stories = storiesOf('Dropdown-with-input', module);
 stories.add('DropDown (normal)', () => {
 
     return (
