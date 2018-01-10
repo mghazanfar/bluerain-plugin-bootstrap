@@ -1,43 +1,91 @@
 {
-  "name": "bluerain-plugin-bootstrap",
-  "version": "1.0.0",
-  "description": "This plugin will provide ui components for bootstrap theme. Components are registered in bluerain context.",
-  "main": "index.js",
-  "scripts": {
-    "compile": "tsc",
-    "test": "jest",
-    "lint": "tslint $(find . -name '*.ts' ! -ipath '*node_modules*')",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
+  "name": "@blueeast/bluerain-plugin-bootstrap",
+  "version": "0.1.0",
+  "description": "A Bluerain plugin that implements bluerain ui interfaces based on reactstrap bootstrap ui framework",
+  "keywords": [],
+  "main": "dist/bluerain-plugin-bootstrap.umd.js",
+  "module": "dist/bluerain-plugin-bootstrap.es5.js",
+  "typings": "dist/types/bluerain-plugin-bootstrap.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "BlueEast Team <code@blueeast.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BlueEastCode/bluerain-plugin-bootstrap.git"
+    "url": "http:git@github.com:BlueEastCode/bluerain-plugin-bootstrap.git",
+    "dry-run": false
   },
-  "keywords": [
-    "bootstrap",
-    "bluerain",
-    "ui",
-    "components"
-  ],
-  "author": "BlueEast Team",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BlueEastCode/bluerain-plugin-bootstrap/issues"
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
   },
-  "homepage": "https://github.com/BlueEastCode/bluerain-plugin-bootstrap#readme",
+  "scripts": {
+    "compile": "tsc",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'src/**/*.tsx' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src",
+    "start": "tsc -w & rollup -c rollup.config.ts -w",
+    "test": "jest --u",
+    "test:watch": "jest --watch",
+    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish --access public && semantic-release post",
+    "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6016",
+    "build-storybook": "build-storybook"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write --use-tabs --single-quote",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverage": true,
+    "mapCoverage": true
+  },
   "devDependencies": {
-    "@blueeast/tslint-config-blueeast": "^0.5.1",
     "@storybook/addon-storyshots": "^3.2.17",
-    "@storybook/addons": "^3.2.13",
-    "@types/jest": "^21.1.8",
     "@types/react-dom": "^16.0.3",
     "@types/react-test-renderer": "^16.0.0",
     "@types/storybook__react": "^3.0.5",
     "awesome-typescript-loader": "^3.4.1",
-    "jest": "^21.2.1",
     "tslint": "^5.8.0",
     "@storybook/react": "^3.3.1",
+    "@types/jest": "^22.0.0",
     "@types/node": "^8.0.0",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
@@ -45,7 +93,9 @@
     "cross-env": "^5.0.1",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
-    "lint-staged": "^5.0.0",
+    "jest": "^22.0.4",
+    "lint-staged": "^6.0.0",
+    "react-gmaps": "^1.5.0",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
@@ -56,11 +106,14 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "semantic-release": "^8.0.0",
-    "ts-jest": "^21.0.0",
-    "ts-node": "^3.0.6",
+    "ts-jest": "^22.0.0",
+    "ts-node": "^4.1.0",
     "typedoc": "^0.9.0",
-    "typescript": "^2.3.4",
+    "@blueeast/tslint-config-blueeast": "^0.5.1",
+    "typescript": "^2.6.2",
     "validate-commit-msg": "^2.12.2",
+    "material-ui": "^1.0.0-beta.26",
+    "@storybook/addons": "^3.2.13",
     "babel-cli": "6.16.0",
     "babel-core": "6.18.0",
     "babel-eslint": "7.0.0",
@@ -131,27 +184,5 @@
     "victory": "^0.22.2",
     "warning": "^3.0.0",
     "ws": "3.3.1"
-  },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/lib/"
-    ],
-    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**.{tsx}",
-      "!src/**.stories.tsx"
-    ]
   }
 }

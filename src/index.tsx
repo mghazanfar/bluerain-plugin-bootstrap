@@ -1,6 +1,8 @@
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import CarosuelComponent from './components/carousel';
+import HomeBannerComponent from './components/homeBanner';
+
 /**
  * Bootstrap Plugin
  * @property {string} pluginName "BootstrapPlugin"
@@ -8,17 +10,18 @@ import CarosuelComponent from './components/carousel';
  */
 class BootstrapPlugin extends Plugin {
 
-	static pluginName = 'BootstrapPlugin';
-	static slug = 'bootstrap';
+  static pluginName = 'BootstrapPlugin';
+  static slug = 'bootstrap';
 
-	static initialize(config = {}, ctx:bluerain) {
+  static initialize(config:any = {}, ctx:bluerain) {
 
-		ctx.Components.register('CarosuelComponent', CarosuelComponent);
-		let theme = ctx.Configs.get('theme');
-		if (!theme) {
-			theme = {};
-		}
-	}
+    let theme = ctx.Configs.get('theme');
+    if (!theme) {
+      theme = {};
+    }
+    ctx.Components.register('CarosuelComponent', CarosuelComponent);
+    ctx.Components.register('HomeBannerComponent', HomeBannerComponent);
+  }
 }
 
 export default BootstrapPlugin;
