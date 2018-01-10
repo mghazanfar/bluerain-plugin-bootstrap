@@ -8,6 +8,7 @@ import Avatar from './components/avatar';
 import Button from './components/Button';
 import Dropdown from './components/DropDown';
 import Switch from './components/switch';
+import Slider from './components/slider';
 import Card, {CardHeader, CardMedia, CardBody, CardFooter} from './components/Card';
 
 
@@ -41,6 +42,7 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.register('CardFooter', CardFooter);
         ctx.Components.register('Avatar', Avatar);
         ctx.Components.register('Switch', Switch);
+        ctx.Components.register('Slider', Slider);
     }
 }
 
