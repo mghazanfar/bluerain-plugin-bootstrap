@@ -29,7 +29,7 @@ import { Button } from 'reactstrap';
  size?: string,
  }
 
-const BlueRainButton = (props: IButton & BSProps) => {
+const BlueRainButton = (props: IButton & IBSProps) => {
     if(props.iconLeft){
         return (
             <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.iconLeft} {props.children}</Button>
