@@ -37,6 +37,6 @@ Jest Testing through storyshots
 
 ## Storybook
 
-- 1st story of the Home banner component in homeBanner.stories.tsx file is written for home banner component with knobs and props "dots","keyboard", "animate", "altText", "banners".
-- 2nd story of the Home banner component in homeBanner.stories.tsx file is written for home banner component without knobs and props "dots","keyboard", "animate", "altText", "banners".
-- 3rd story of the Home banner component in homeBanner.stories.tsx file is written for home banner component without knobs and with default values for "dots","keyboard", "animate", "altText", "banners".
+- 1st story of the Home banner component in carousel.stories.tsx file is written for home banner component with knobs and props "dots","keyboard", "animate", "altText", "banners".
+- 2nd story of the Home banner component in carousel.stories.tsx file is written for home banner component without knobs and props "dots","keyboard", "animate", "altText", "banners".
+- 3rd story of the Home banner component in carousel.stories.tsx file is written for home banner component without knobs and with default values for "dots","keyboard", "animate", "altText", "banners".

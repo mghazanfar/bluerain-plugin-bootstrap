@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 // tslint:disable-next-line:no-submodule-imports
 import 'bootstrap/dist/css/bootstrap.css';
 import BR, { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
-import configurations from '../../../src/config';
 // tslint:disable-next-line:no-submodule-imports
 import { ICarousel } from '@blueeast/bluerain-ui-interfaces/Components/Carousel';
 import {
@@ -21,7 +20,7 @@ import {
  * @param {any} props.altText Alt text of the image.
  * @param {boolean} props.animate Transition is animated.
  * @param {number} props.activeIndex Index of slide to be shown.
- * @param {array} props.banners Data to be shown in scroll.
+ * @param {any} props.banners Data to be shown in scroll.
  * @name Home Banner Component
  */
 BR.boot({renderApp:false});
@@ -31,12 +30,14 @@ export interface IHomeBannerComponentState {
 }
 
 let items;
+let slides;
+let carouselData;
 class HomeBannerComponent extends React.Component<ICarousel, IHomeBannerComponentState> {
 
   // tslint:disable-next-line:no-shadowed-variable
   constructor(ICarousel:any) {
     super(ICarousel);
-    items = ICarousel.banners;
+    items = this.props.banners;
     this.state = { index: 0 };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
@@ -75,51 +76,49 @@ class HomeBannerComponent extends React.Component<ICarousel, IHomeBannerComponen
   }
 
   render() {
-    const Image = BR.Components.get('Image');
     const {
       dots,
       keyboard,
-      altText,
       animate,
       activeIndex
     } = this.props;
-    const banners = this.props.banners || [];
+    const myData = this.props.banners ? this.props.banners : [];
     const { index } = this.state;
-    const imgStyle = {
-      width: '100%',
-      height: 500
-    };
-    const slides = banners.map((item, i) => {
-      const imageSrc = `${configurations.S3BucketPath}${item}`;
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={i}
-        >
-          <Image source={imageSrc} resizeMode={'auto'} style={imgStyle} alt={altText} />
-          <CarouselCaption />
-        </CarouselItem>
-      );
-    });
+    if (myData && myData.props){
+      carouselData = myData.props.children;
+      slides = carouselData.map((item, i) => {
+        return (
+          <CarouselItem
+            onExiting={this.onExiting}
+            onExited={this.onExited}
+            key={i}
+          >
+            {item}
+            <CarouselCaption captionText="" />
+          </CarouselItem>
+        );
+      });
+    }
     const dotsShow =
       dots?
-        <CarouselIndicators items={items}
+        <CarouselIndicators items={slides}
                             activeIndex={activeIndex?activeIndex:index} onClickHandler={this.goToIndex} />:'';
-    return (
-      <Carousel
-        activeIndex={activeIndex?activeIndex:index}
-        next={this.next}
-        previous={this.previous}
-        keyboard={keyboard}
-        slide={animate}
-      >
-        {dotsShow}
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
-    );
+      return (
+        <Carousel
+          activeIndex={activeIndex?activeIndex:index}
+          next={this.next}
+          previous={this.previous}
+          keyboard={keyboard}
+          slide={animate}
+        >
+          {dotsShow}
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        </Carousel>
+      );
+
+
   }
 }
 
