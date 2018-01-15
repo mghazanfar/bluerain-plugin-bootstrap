@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, number, object, array } from '@storybook/addon-knobs';
 import BR from '@blueeast/bluerain-os';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import Card, { CardMedia, CardBody, CardFooter, CardHeader } from '../Card';
+import Button from '../Button';
 
 const stories = storiesOf('Carousel', module);
 stories.addDecorator(withKnobs);
@@ -31,17 +31,20 @@ stories.add('Carousel of Images', () => {
         source={'https://s3.amazonaws.com/dukaan-ui/banner-01.png'}
         resizeMode={'auto'}
         style={imgStyle}
-        alt="bannerImage" />
+        alt="bannerImage"
+      />
       <Image
         source={'https://getbootstrap.com/assets/img/bootstrap-stack.png'}
         resizeMode={'auto'}
         style={imgStyle}
-        alt="bannerImage" />
+        alt="bannerImage"
+      />
       <Image
         source={'https://s3.amazonaws.com/dukaan-ui/banner-01.png'}
         resizeMode={'auto'}
         style={imgStyle}
-        alt="bannerImage" />
+        alt="bannerImage"
+      />
     </View>
   );
   return (
@@ -65,29 +68,25 @@ stories.add('Carousel of Cards', () => {
   const slidesToScroll = number('Slides Scrolled', 1);
   const data = (
     <View>
-      <Card>
-        <CardImg top width="100%"
-                 src="https://s3.amazonaws.com/dukaan-ui/banner-01.png"
-                 alt="Card image cap"
-        />
+      <Card style={{width:300}} raised={true}>
+        <CardHeader title="Header 1"/>
+        <CardMedia top={true} src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title.</CardText>
-          <Button>Button</Button>
+          <h3>Special Title Treatment</h3>
+          <p>With supporting text below as a natural lead-in to additional content.</p>
+          <Button color="success" >Go somewhere</Button>
         </CardBody>
+        <CardFooter>Footer</CardFooter>
       </Card>
-      <Card>
-        <CardImg top width="100%"
-                 src="https://s3.amazonaws.com/dukaan-ui/banner-01.png"
-                 alt="Card image cap"
-        />
+      <Card style={{width:300}} raised={true}>
+        <CardHeader title="Header 2"/>
+        <CardMedia top={true} src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title.</CardText>
-          <Button>Button</Button>
+          <h3>Special Title Treatment</h3>
+          <p>With supporting text below as a natural lead-in to additional content.</p>
+          <Button color="success" >Go somewhere</Button>
         </CardBody>
+        <CardFooter>Footer</CardFooter>
       </Card>
     </View>
   );
