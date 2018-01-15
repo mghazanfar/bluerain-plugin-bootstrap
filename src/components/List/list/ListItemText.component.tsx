@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { ICardFooter } from 'bluerain-ui-interfaces/Components/Card';
-import { CardFooter } from 'reactstrap';
+import { IListItemText } from 'bluerain-ui-interfaces/Components/List';
+import { ListGroupItemText } from 'reactstrap';
 
 /**
  * The props of CardBody Component
@@ -13,15 +13,15 @@ import { CardFooter } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
-const BlueRainCardFooter = (props: ICardFooter) => {
+const ListItemText = (props: IListItemText) => {
     return (
-        <CardFooter
+        <ListGroupItemText
             {...props}
         >
         {props.children}
-        </CardFooter>
+        </ListGroupItemText>
     );
 
 };
 
-export default BlueRainCardFooter;
+export default ListItemText;

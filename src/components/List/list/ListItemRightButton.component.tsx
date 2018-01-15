@@ -4,24 +4,30 @@
 
 import * as React from 'react';
 import { ICardFooter } from 'bluerain-ui-interfaces/Components/Card';
-import { CardFooter } from 'reactstrap';
+import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
 
 /**
- * The props of CardBody Component
- * @param {Object} props.style style object for Card's style.
- * @param {Node} props.children tag with which the Component will be rendered.
- * @param {string} props.className className for styling component with css.
+ * The props of ListItemRightButton Component
+ * @param {Object} props.style style object for ListItemRightButton's style.
+ * @param {Node} props.children children of ListItemRightButton (expects a Button).
  */
 
-const BlueRainCardFooter = (props: ICardFooter) => {
+ export interface IBSProps {
+     bluerain?: BlueRainType,
+ }
+
+const ListItemRightButton = (props: ICardFooter & IBSProps) => {
+    const View = props.bluerain.Components.get('View');
+    const Right = {...props.style, float:'right'};
     return (
-        <CardFooter
+        <View
             {...props}
+            style={Right}
         >
         {props.children}
-        </CardFooter>
+        </View>
     );
 
 };
 
-export default BlueRainCardFooter;
+export default withBlueRain(ListItemRightButton);

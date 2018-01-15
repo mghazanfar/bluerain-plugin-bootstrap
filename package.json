@@ -64,6 +64,7 @@
   "dependencies": {
     "@blueeast/bluerain-os": "^0.5.0",
     "bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/List",
+    "bluerain-icons": "git+ssh://git@bitbucket.org:be-iot-platform/bluerain-icons.git#develop",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
     "bootstrap": "4.0.0-beta.2",

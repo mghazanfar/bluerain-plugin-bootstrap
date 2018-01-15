@@ -20,3 +20,27 @@ storiesOf('List', module).add('List with style and raised props', () =>
 >
 Raised
 </List>);
+
+storiesOf('List', module).add('List of ReactStrap1', () =>
+<List
+    style={{width:'100%', height:300}}
+    className="bg-main"
+>
+Raised
+</List>);
+
+storiesOf('List', module).add('List of ReactStrap2', () =>
+<List
+    style={{width:'100%', height:300}}
+    className="bg-main"
+>
+Raised
+</List>);
+
+storiesOf('List', module).add('List of ReactStrap3', () =>
+<List
+    style={{width:'100%', height:300}}
+    className="bg-main"
+>
+Raised
+</List>);

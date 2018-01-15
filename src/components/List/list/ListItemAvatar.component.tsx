@@ -3,11 +3,11 @@
  */
 
 import * as React from 'react';
-import { ICardMedia } from 'bluerain-ui-interfaces/Components/Card';
-import { CardImg } from 'reactstrap';
+import { IListItemAvatar } from 'bluerain-ui-interfaces/Components/List';
+import Avatar from '../../avatar';
 
 /**
- * The props of CardMedia Component
+ * The props of ListItemAvata Component
  * @param {Object} props.style style object for Card's style.
  * @param {string or function} props.tag tag with which the Component will be rendered.
  * @param {string} props.className className for styling component with css.
@@ -21,18 +21,14 @@ import { CardImg } from 'reactstrap';
   * @param {boolean} props.bottom use bottom prop to assign styles for image at bottom position.
   */
 
-export interface IBSProps {
-    top ?: boolean,
-    bottom ?: boolean,
-    }
 
-const BlueRainCardMedia = (props: ICardMedia & IBSProps) => {
+const ListItemAvata = (props: IListItemAvatar) => {
     return (
-        <CardImg
+        <Avatar
         {...props}
         />
     );
 
 };
 
-export default BlueRainCardMedia;
+export default ListItemAvata;
