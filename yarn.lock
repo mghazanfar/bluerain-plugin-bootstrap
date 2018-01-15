@@ -46,15 +46,6 @@
     react-scripts-ts "^2.8.0"
     redux "^3.7.2"
 
-"@blueeast/bluerain-ui-interfaces@https://github.com/BlueEastCode/bluerain-ui-interfaces.git#master":
-  version "1.0.0"
-  resolved "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#a35aaab00e53f4f0404f2342c27713bbe2f26aea"
-  dependencies:
-    "@blueeast/tslint-config-blueeast" "^0.5.1"
-    "@types/react" "^16.0.29"
-    react "^16.2.0"
-    typedoc "^0.9.0"
-
 "@blueeast/tslint-config-blueeast@^0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@blueeast/tslint-config-blueeast/-/tslint-config-blueeast-0.5.1.tgz#6ee94b1c877c17fad5f124c9ffba835dbaaf2863"
@@ -1827,6 +1818,15 @@ block-stream@*:
 bluebird@^3.4.7, bluebird@^3.5.0:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
+
+"bluerain-ui-interfaces@https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/List":
+  version "1.0.0"
+  resolved "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#84c4c76b786c1e5f5ed31e7c75b0cc3f0ece4b75"
+  dependencies:
+    "@blueeast/tslint-config-blueeast" "^0.5.1"
+    "@types/react" "^16.0.29"
+    react "^16.2.0"
+    typedoc "^0.9.0"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"

@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { ICardBody } from '@blueeast/bluerain-ui-interfaces/Components/Card';
+import { ICardBody } from 'bluerain-ui-interfaces/Components/Card';
 import { CardBody } from 'reactstrap';
 
 /**

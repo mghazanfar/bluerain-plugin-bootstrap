@@ -1,6 +1,9 @@
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import TextInput from './components/TextInput';
+import Button from './components/Button';
+import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/Card';
+
 /**
  * Bootstrap Plugin
  * @property {string} pluginName "BootstrapPlugin"
@@ -12,12 +15,17 @@ class BootstrapPlugin extends Plugin {
 	static slug = 'bootstrap';
 
 	static initialize(config = {}, ctx:bluerain) {
-
-		ctx.Components.register('TextInput', TextInput);
 		let theme = ctx.Configs.get('theme');
 		if (!theme) {
 			theme = {};
 		}
+        ctx.Components.register('Button', Button);
+        ctx.Components.register('Card', Card);
+        ctx.Components.register('CardHeader', CardHeader);
+        ctx.Components.register('CardMedia', CardMedia);
+        ctx.Components.register('CardBody', CardBody);
+        ctx.Components.register('CardFooter', CardFooter);
+		ctx.Components.register('TextInput', TextInput);
 	}
 }
 
