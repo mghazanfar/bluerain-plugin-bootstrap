@@ -75,7 +75,7 @@ stories.add('Carousel of Cards', () => {
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
+          <CardTitle>Card title 1</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
           <CardText>Some quick example text to build on the card title.</CardText>
           <Button>Button</Button>
@@ -89,7 +89,7 @@ stories.add('Carousel of Cards', () => {
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
+          <CardTitle>Card title 2</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
           <CardText>Some quick example text to build on the card title.</CardText>
           <Button>Button</Button>
