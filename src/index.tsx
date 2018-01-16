@@ -3,6 +3,7 @@ import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import Chip from './components/chip';
 import BadgeUi from './components/badge';
 import MapComponent from './components/map';
+import CarouselComponent from './components/carousel';
 
 
 /**
@@ -24,6 +25,7 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.register('Chip', Chip);
         ctx.Components.register('BadgeUi', BadgeUi);
         ctx.Components.register('MapComponent', MapComponent);
+        ctx.Components.register('CarouselComponent', CarouselComponent);
     }
 }
 

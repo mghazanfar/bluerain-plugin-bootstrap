@@ -1,0 +1,19 @@
+.slick-dots {
+    bottom: 20px;
+    width: auto;
+    left: 45%;
+    border-radius: 100px;
+    background-color: white;
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: red;
+}
+
+.slick-dots li{
+    padding: 3px;
+}
