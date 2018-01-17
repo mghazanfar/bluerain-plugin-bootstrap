@@ -9,7 +9,7 @@ import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
 
 /**
  * The props of ListItemIcon Component
- * @param {Object} props.style style object for Card's style.
+ * @param {Object} props.style style object for ListItemIcon's style.
  * @param {Node} props.children tag with which the Component will be rendered.
  */
 

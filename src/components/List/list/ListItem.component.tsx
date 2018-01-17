@@ -8,15 +8,19 @@ import { ListGroupItem } from 'reactstrap';
 
 /**
  * The props of ListItem Component
- * @param {Object} props.style style object for Card's style.
- * @param {Node} props.children tag with which the Component will be rendered.
+ * @param {Object} props.style style object for ListItem's style.
+ * @param {Node} props.children Children of ListItem.
  * @param {boolean} props.active If true, ListItem is rendered in active state.
  */
 
  /**
   * Platform specific props
-  * @param {string} props.className class to extend styling of Listitem.
+  * @param {string} props.className className to extend styling of Listitem.
   * @param {enum} props.color background color of ListItem.
+  * @param {string} props.tag tag with which ListItem will be rendered.
+  * @param {string} props.href src to which the ListItem will be directed.
+  * @param {boolean} props.action ListItem if generated with action state if true and tag is button.
+  * @param {boolean} props.disabled If true, ListItem is rendered disabled.
   */
 
   export interface IBSProps {

@@ -1,70 +1,86 @@
-# Card
+# List
 
 ## Universal Props
 
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| style | Object | | style object for Card. |
-| children | Node | | Children of Card component. |
-| raised | bool | true | If true, Card is generated with raised styling (with border).|
-| tag | string or func | div | Tag with which the Component will be rendered. |
-| className | string |  | className for styling component with css. |
+| style | Object | | style object for List. |
+| children | Node | | Children of List component. |
 
 ## Specific Library Props
 
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| color | string | white | color of the background of Card component. |
-| inverse | bool | false | If true, turns text color of card into white. |
-| body | bool | false | If true, card is generated with body specific styling. |
+| className | string |  | className to give css styling. |
 
-# CardHeader
+# ListItem
 
 ## Universal Props
 
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| style | Object | | style object for CardHeader. |
-| children | Node | | Children of CardHeader component. |
-| title | Node | | title of the CardHeader.|
-| className | string |  | className for styling component with css. |
+| style | Object | | style object for ListItem. |
+| children | Node | | Children of ListItem component. |
+| active | bool | | If true, ListItem is rendered in active state. |
 
-# CardMedia
+## Specific Library Props
+
+| Name | Type | Default | Description |
+|:-----|:-----|:--------|:------------|
+| className | string |  | className to extend styling of Listitem. |
+| color | enum |  | background color of ListItem. |
+| tag | string | li | tag with which ListItem will be rendered. |
+| href | string |  | src to which the ListItem will be directed. |
+| action | bool |  | ListItem if generated with action state if true and tag is button. |
+| disabled | bool |  | If true, ListItem is rendered disabled. |
+
+# ListItemAvatar
 
 ## Universal Props
 
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| style | Object |  | style object for CardMedia. |
+| style | Object |  | style object for ListItemAvatar. |
 | src | string |  | src for the CardMedia.|
+| size | number | 70  | size of the ListItemAvatar (in px). |
 | className | string |  | className for styling component with css. |
 
-## Specific Library Props
-
-| Name | Type | Default | Description |
-|:-----|:-----|:--------|:------------|
-| top | bool | false | use top prop to assign position of component at top. |
-| bottom | bool | false | use bottom prop to assign position of component at bottom. |
-
-# CardBody
+# ListItemRightButton
 
 ## Universal Props
 
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| style | Object |  | style object for CardBody. |
-| children | Node | | Children of CardBody component. |
-| className | string |  | className for styling component with css. |
+| style | Object |  | style object for ListItemRightButton. |
+| children | Node | | children of ListItemRightButton (expects a Button). |
 
-# CardFooter
+# ListHeader
 
 ## Universal Props
 
 | Name | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
-| style | Object |  | style object for CardFooter. |
-| children | Node | | Children of CardFooter component. |
+| style | Object |  | style object for ListHeader. |
+| children | Node | | Children of ListHeader component. |
+
+# ListItemText
+
+## Universal Props
+
+| Name | Type | Default | Description |
+|:-----|:-----|:--------|:------------|
+| style | Object |  | style object for ListItemText. |
+| children | Node | | Children of ListItemText component. |
 | className | string |  | className for styling component with css. |
+
+# ListItemIcon
+
+## Universal Props
+
+| Name | Type | Default | Description |
+|:-----|:-----|:--------|:------------|
+| style | Object |  | style object for ListItemIcon. |
+| children | Node | | children of ListItemIcon (expects an Icon). |
 
 ## How to use
 
@@ -73,31 +89,50 @@ import React from 'react';
 import { withBluerain } from "@blueeast/bluerain-os";
 
 
-const myCard = (props) => {
+const myList = (props) => {
     const BR = props.bluerain;
-    const Card = BR.Components.get('Card');
-    const CardMedia = BR.Components.get('CardMedia');
-    const CardBody = BR.Components.get('CardBody');
+    const View = BR.Components.get('View');
+    const List = BR.Components.get('List');
+    const ListItem = BR.Components.get('ListItem');
+    const ListHeader = BR.Components.get('ListHeader');
+    const ListItemText = BR.Components.get('ListItemText');
+    const ListItemRightButton = BR.Components.get('ListItemRightButton');
+    const ListItemIcon = BR.Components.get('ListItemIcon');
+    const ListItemAvatar = BR.Components.get('ListItemAvatar');
     return (
-    <Card style={{width:300}} >
-        <CardMedia top src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" />
-        <CardBody>
-          <h2>Card Title</CardTih2tle>
-          <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </CardBody>
-    </Card>
+    <List>
+        <ListItem active>
+            <ListItemRightButton><Button color="dark">Dark</Button></ListItemRightButton>
+            <View style={{flexDirection:'row'}}>
+            <ListItemIcon><Favorite /></ListItemIcon>
+            <ListHeader>List group item heading</ListHeader>
+            </View>
+            <ListItemText>
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+            </ListItemText>
+        </ListItem>
+        <ListItem>
+            <ListItemRightButton><Button color="danger">Danger</Button></ListItemRightButton>
+            <View style={{flexDirection:'row'}}>
+                <ListItemAvatar src="https://reactstrap.github.io/assets/logo.png" />
+                <View style={{marginLeft:15, marginTop:8}}>
+                    <ListHeader>List group item heading</ListHeader>
+                    <ListItemText>
+                    Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                    </ListItemText>
+                </View>
+            </View>
+        </ListItem>
+    </List>
     );
 }
 
-export default withBluerain(myCard);
+export default withBluerain(myList);
 ```
 
 ## Storybook
 
-- 1st story of the Card component in Card.stories.tsx file is written with knobs to visualize the effects when different props are changed.
+- Last story of the List component in List.stories.tsx file is written with knobs to visualize the effects when different props are changed.
 
 ## Tests
 

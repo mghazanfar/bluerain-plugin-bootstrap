@@ -15,7 +15,6 @@ const Image = BR.Components.get('Image');
 
 const View = BR.Components.get('View');
 
-const label = text('label as child', 'with knobs');
 storiesOf('List', module).add('List with style and raised props', () =>
 <List
     style={{width:'100%', height:300}}
@@ -86,9 +85,9 @@ storiesOf('List', module).add('BlueRainList', () =>
 <List>
     <ListItem active>
         <ListItemRightButton><Button color="dark">Dark</Button></ListItemRightButton>
-        <View style={{flexDirection:'row'}}>
+        <View style={{flexDirection:'row', }}>
         <ListItemIcon><Favorite /></ListItemIcon>
-        <ListHeader>List group item heading</ListHeader>
+        <ListHeader style={{marginLeft:5}}>List group item heading</ListHeader>
         </View>
         <ListItemText>
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.

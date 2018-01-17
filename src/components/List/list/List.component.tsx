@@ -8,15 +8,13 @@ import { ListGroup } from 'reactstrap';
 
 /**
  * The props of List Component
- * @param {Node} props.children Label to be passed as child.
- * @param {Object} props.style style object for Card's style.
+ * @param {Node} props.children Children of List component.
+ * @param {Object} props.style style object for List's style.
  */
 
  /**
   * Platform specific props
-  * @param {string} props.color background color of the card.
-  * @param {boolean} props.inverse If true, turns text color of card into white.
-  * @param {boolean} props.body If true, card is generated with body specific styling.
+  * @param {string} props.className className to give css styling.
   */
 
  export interface IBSProps {
