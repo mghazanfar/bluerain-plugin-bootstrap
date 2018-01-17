@@ -25,6 +25,7 @@ import { ListGroupItem } from 'reactstrap';
     tag?: string,
     href?: string,
     action?: boolean,
+    disabled?: boolean,
     }
 
 const ListItem = (props: IListItem & IBSProps) => {

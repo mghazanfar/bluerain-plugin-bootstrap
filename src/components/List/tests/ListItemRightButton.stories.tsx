@@ -16,5 +16,5 @@ const label = text('label as child', 'with knobs');
 storiesOf('ListItemRightButton', module).add('Card with style and raised props', () =>
 <ListItemRightButton style={{backgroundColor:'grey'}}
     >
-    <Button color="dark"><Text>Dark</Text></Button>
+    <Button color="dark">Right</Button>
 </ListItemRightButton>);
