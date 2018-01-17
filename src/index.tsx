@@ -2,7 +2,9 @@ import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import TextInput from './components/TextInput';
 import Button from './components/Button';
+import Avatar from './components/avatar';
 import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/Card';
+import List , { ListItem, ListHeader, ListItemAvatar, ListItemIcon, ListItemText, ListItemRightButton} from './components/List';
 
 /**
  * Bootstrap Plugin
@@ -26,6 +28,14 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.register('CardBody', CardBody);
         ctx.Components.register('CardFooter', CardFooter);
 		ctx.Components.register('TextInput', TextInput);
+		ctx.Components.register('Avatar', Avatar);
+        ctx.Components.register('List', List);
+        ctx.Components.register('ListItem', ListItem);
+        ctx.Components.register('ListHeader', ListHeader);
+        ctx.Components.register('ListItemAvatar', ListItemAvatar);
+        ctx.Components.register('ListItemIcon', ListItemIcon);
+        ctx.Components.register('ListItemText', ListItemText);
+        ctx.Components.register('ListItemRightButton', ListItemRightButton);
 	}
 }
 
