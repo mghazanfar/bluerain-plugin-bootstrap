@@ -3,6 +3,7 @@ import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import TextInput from './components/TextInput';
 import Button from './components/Button';
 import Avatar from './components/avatar';
+import Breadcrumb from './components/Breadcrumb';
 import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/Card';
 import List , { ListItem, ListHeader, ListItemAvatar, ListItemIcon, ListItemText, ListItemRightButton} from './components/List';
 
@@ -21,21 +22,22 @@ class BootstrapPlugin extends Plugin {
 		if (!theme) {
 			theme = {};
 		}
-        ctx.Components.register('Button', Button);
-        ctx.Components.register('Card', Card);
-        ctx.Components.register('CardHeader', CardHeader);
-        ctx.Components.register('CardMedia', CardMedia);
-        ctx.Components.register('CardBody', CardBody);
-        ctx.Components.register('CardFooter', CardFooter);
-		ctx.Components.register('TextInput', TextInput);
-		ctx.Components.register('Avatar', Avatar);
-        ctx.Components.register('List', List);
-        ctx.Components.register('ListItem', ListItem);
-        ctx.Components.register('ListHeader', ListHeader);
-        ctx.Components.register('ListItemAvatar', ListItemAvatar);
-        ctx.Components.register('ListItemIcon', ListItemIcon);
-        ctx.Components.register('ListItemText', ListItemText);
-        ctx.Components.register('ListItemRightButton', ListItemRightButton);
+        ctx.Components.has('Button') ? ctx.Components.replace('Button', Button) : ctx.Components.set('Button', Button);
+        ctx.Components.set('Card', Card);
+        ctx.Components.set('CardHeader', CardHeader);
+        ctx.Components.set('CardMedia', CardMedia);
+        ctx.Components.set('CardBody', CardBody);
+        ctx.Components.set('CardFooter', CardFooter);
+        ctx.Components.has('TextInput') ? ctx.Components.replace('TextInput', TextInput) : ctx.Components.set('TextInput', TextInput);
+		ctx.Components.set('Avatar', Avatar);
+        ctx.Components.set('List', List);
+        ctx.Components.set('ListItem', ListItem);
+        ctx.Components.set('ListHeader', ListHeader);
+        ctx.Components.set('ListItemAvatar', ListItemAvatar);
+        ctx.Components.set('ListItemIcon', ListItemIcon);
+        ctx.Components.set('ListItemText', ListItemText);
+        ctx.Components.set('ListItemRightButton', ListItemRightButton);
+        ctx.Components.set('Breadcrumb', Breadcrumb);
 	}
 }
 
