@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { ICardFooter } from '@blueeast/bluerain-ui-interfaces/Components/Card';
+import { ICardFooter } from 'bluerain-ui-interfaces/Components/Card';
 import { CardFooter } from 'reactstrap';
 
 /**

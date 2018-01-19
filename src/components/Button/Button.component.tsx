@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import IButton from '@blueeast/bluerain-ui-interfaces/Components/Button';
+import IButton from 'bluerain-ui-interfaces/Components/Button';
 import { Button } from 'reactstrap';
 
 

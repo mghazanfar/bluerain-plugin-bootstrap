@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { Badge } from 'reactstrap';
-import { IChip } from '@blueeast/bluerain-ui-interfaces/Components/Chip';
+import { IChip } from 'bluerain-ui-interfaces/Components/Chip';
 
 /**
  * The props of Chip Component

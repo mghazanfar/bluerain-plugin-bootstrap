@@ -1,6 +1,6 @@
 import React ,{ ReactNode }  from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { IPicker } from '@blueeast/bluerain-ui-interfaces/Components/Picker';
+import { IPicker } from 'bluerain-ui-interfaces/Components/Picker';
 
 /**
  * The props of IReactstarpDropDown Component

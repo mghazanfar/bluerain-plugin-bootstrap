@@ -2,9 +2,7 @@ import * as React from 'react';
 import Avatar from '../../avatar';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import FolderIcon from 'material-ui-icons/Folder';
-import PageviewIcon from 'material-ui-icons/Pageview';
-import AssignmentIcon from 'material-ui-icons/Assignment';
+import { Favorite } from 'bluerain-icons';
 import { withKnobs, text, number, object} from '@storybook/addon-knobs';
 const stories = storiesOf('Avatar', module);
 stories.add('Avatar (with knobs)', () => {
@@ -25,13 +23,13 @@ stories.add('Avatar (with Icons)', () => {
     return  (
 <div style={{display:'flex',}}>
     <Avatar style={{backgroundColor:'pink'}}>
-    <FolderIcon />
+    <Favorite />
     </Avatar>
     <Avatar style={{backgroundColor:'grey'}}>
-    <PageviewIcon />
+    <Favorite />
     </Avatar>
     <Avatar style={{backgroundColor:'green'}}>
-    <AssignmentIcon style={{width:55, height: 55}} />
+    <Favorite style={{width:55, height: 55}} />
     </Avatar>
 </div>);
 });
