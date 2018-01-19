@@ -13,11 +13,30 @@ import {Icon} from 'react-fa';
 export interface IconProps {
     name?: string;
     color?: string;
-    borderColor?: string;
+    size?: string;
 }
-
-const FooterBarComponent = (props: IconProps) =>
-    (
-      <Icon name={props.name} style={{color: props.color, textShadow: `-1px 0 ${props.borderColor}, 0 1px ${props.borderColor}, 1px 0 ${props.borderColor}, 0 -1px ${props.borderColor}`}} />
-    );
+let iconName;
+const FooterBarComponent = (props: IconProps) => {
+  const {
+    name,
+    size,
+    color
+  } = props;
+  switch(name) {
+    case 'cart':
+      iconName = 'shopping-cart';
+      break;
+    case 'menu':
+      iconName = 'bars';
+      break;
+    case 'settings':
+      iconName = 'gear';
+      break;
+    default:
+      iconName = name;
+  }
+  return (
+    <Icon name={iconName} style={{fontSize: size, color: color}} />
+  );
+};
 export default FooterBarComponent;

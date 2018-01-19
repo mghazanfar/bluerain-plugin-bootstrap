@@ -7,8 +7,8 @@ import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 const stories = storiesOf('Footer Bar', module);
 
 stories.add('Footer Icons', () => {
-    const name = text('Icon Name', 'home');
+    const name = text('Icon Name', 'settings');
     const color = text('Icon Color', 'black');
-    const borderColor = text('Icon Border Color', 'green');
-  return <FooterBarComponent name={name} color={color} borderColor={borderColor} />;
+    const size = text('Icon Size', 200);
+  return <FooterBarComponent name={name} color={color} size={size} />;
 });
