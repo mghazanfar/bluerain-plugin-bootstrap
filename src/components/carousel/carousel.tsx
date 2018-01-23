@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import './style.css';
 import { withBlueRain } from '@blueeast/bluerain-os';
-import { ICarousel } from '@blueeast/bluerain-ui-interfaces/Components/Carousel';
+import { ICarousel } from 'bluerain-ui-interfaces/Components/Carousel';
 
 /**
  * * This is the list of the props which this component accepts
