@@ -1,10 +1,10 @@
-import React from 'react';
-import Slider from 'react-slick';
+import './style.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import './style.css';
-import { withBlueRain } from '@blueeast/bluerain-os';
 import { ICarousel } from 'bluerain-ui-interfaces/Components/Carousel';
+import { withBlueRain } from '@blueeast/bluerain-os';
+import React from 'react';
+import Slider from 'react-slick';
 
 /**
  * * This is the list of the props which this component accepts
@@ -20,10 +20,10 @@ import { ICarousel } from 'bluerain-ui-interfaces/Components/Carousel';
 let slides;
 
 export interface Icaros {
-  bluerain:any
+	bluerain:any
 }
 const CarouselComponent = (props: ICarousel & Icaros ) => {
-  const {
+	const {
     dots,
     infinite,
     speed,
@@ -31,38 +31,38 @@ const CarouselComponent = (props: ICarousel & Icaros ) => {
     slidesToScroll,
     bluerain: BR
   } = props;
-  const myData = props.banners ? props.banners : [];
-  const View = BR.Components.get('View');
-  const settings = {
-    dots: dots,
-    infinite: infinite,
-    speed: speed,
-    slidesToShow: slidesToShow,
-    slidesToScroll: slidesToScroll
-  };
+	const myData = props.banners ? props.banners : [];
+	const View = BR.Components.get('View');
+	const settings = {
+		dots: dots,
+		infinite: infinite,
+		speed: speed,
+		slidesToShow: slidesToShow,
+		slidesToScroll: slidesToScroll
+	};
   // React Slick expects each item inside a div, after using View, UI was discturbed so
   // I had to apply the styles on View
-  const viewStyle = {
-    width: '100%',
-    display: 'block',
-    float: 'left',
-    height: '100%'
-  };
-  if (myData && myData.props){
-    const carouselData = myData.props.children;
-    slides = carouselData.map((item, i) => {
-      return (
+	const viewStyle = {
+		width: '100%',
+		display: 'block',
+		float: 'left',
+		height: '100%'
+	};
+	if (myData && myData.props){
+		const carouselData = myData.props.children;
+		slides = carouselData.map((item, i) => {
+			return (
         <View key={i} style={viewStyle}>
           {item}
         </View>
-      );
-    });
-  }
-  return (
+			);
+		});
+	}
+	return (
     <Slider {...settings}>
       {slides}
     </Slider>
-  );
+	);
 };
 
 

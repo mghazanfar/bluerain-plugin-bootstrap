@@ -1,10 +1,9 @@
-import React from 'react';
-import { Plugin ,bluerain} from '@blueeast/bluerain-os';
-import Chip from './components/chip';
+import { Plugin ,bluerain } from '@blueeast/bluerain-os';
 import BadgeUi from './components/badge';
-import MapComponent from './components/map';
 import CarouselComponent from './components/carousel';
-
+import Chip from './components/chip';
+import MapComponent from './components/map';
+import React from 'react';
 
 /**
  * Bootstrap Plugin
@@ -22,11 +21,11 @@ class BootstrapPlugin extends Plugin {
 		if (!theme) {
 			theme = {};
 		}
-        ctx.Components.register('Chip', Chip);
-        ctx.Components.register('BadgeUi', BadgeUi);
-        ctx.Components.register('MapComponent', MapComponent);
-        ctx.Components.register('CarouselComponent', CarouselComponent);
-    }
+		ctx.Components.register('Chip', Chip);
+		ctx.Components.register('BadgeUi', BadgeUi);
+		ctx.Components.register('MapComponent', MapComponent);
+		ctx.Components.register('Carousel', CarouselComponent);
+	}
 }
 
 export default BootstrapPlugin;
