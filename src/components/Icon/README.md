@@ -1,4 +1,4 @@
-# Footer Bar
+# Icon component
 
 ## Universal Props
 
@@ -26,5 +26,5 @@ export default FooterBarSample;
 
 ## Storybook
 
-- 1st story of the Footer Bar component in footerBar.stories.tsx file is written for Footer Bar with knobs and props for icon name, color and size.
+- 1st story of the Footer Bar component in icon.stories.tsx file is written for Footer Bar with knobs and props for icon name, color and size.
 
