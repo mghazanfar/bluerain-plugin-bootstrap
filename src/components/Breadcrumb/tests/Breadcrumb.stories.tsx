@@ -10,7 +10,7 @@ stories.add('Breadcrumb (knobs)', () => {
 	const label = text('label', 'Site');
 	const colorPrev = text('previous color', 'red');
 	const colorActive = text('active color', 'yellow');
-	const data = object('object of data ', [{ title:'CardView', path: 'www.facebook.com' }]);
+	const data = object('object of data ', [{ title:'CardView', path: 'https://www.facebook.com' }]);
 	return (
   <div style={{ padding: 20, display:'inline-block' }}>
     <Breadcrumb
@@ -25,7 +25,7 @@ stories.add('Breadcrumb (knobs)', () => {
 
 stories.add('Breadcrumb (with default colors)', () => {
 	const label = 'Site';
-	const data = [{ title:'CardView', path: 'www.facebook.com' }];
+	const data = [{ title:'CardView', path: 'https://www.facebook.com' }];
 
 	return (
   <div style={{ padding: 20, display:'inline-block' }}><Breadcrumb
@@ -40,7 +40,7 @@ stories.add('Breadcrumb default', () => (<div style={{ padding: 20, display:'inl
 
 stories.add('Breadcrumb with multiple breadcrumb entries', () => (
 <div style={{ padding: 20, display:'inline-block' }}>
-  <Breadcrumb data={[{ title:'CardView1', path: 'www.facebook.com' }, { title:'CardView2', path: 'www.linkedin.com' }, { title:'CardView3', path: 'www.instagram.com' }]} label="Current" />
+  <Breadcrumb data={[{ title:'CardView1', path: 'https://www.facebook.com' }, { title:'CardView2', path: 'https://www.linkedin.com' }, { title:'CardView3', path: 'https://www.instagram.com' }]} label="Current" />
 </div>));
 
 
