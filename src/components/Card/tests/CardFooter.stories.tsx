@@ -1,22 +1,19 @@
 import * as React from 'react';
+import { boolean, object, text, withKnobs } from '@storybook/addon-knobs';
 import { CardFooter } from '../../Card';
-import BR from '@blueeast/bluerain-os';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
-BR.boot({renderApp:false});
+import BR from '@blueeast/bluerain-os';
+
+BR.boot({ renderApp:false });
 
 
 storiesOf('CardFooter', module).add('CardFooter with className prop', () =>
-<CardFooter
-className="bg-footer"
-    />);
+<CardFooter className="bg-footer" />);
 
 storiesOf('CardFooter', module).add('CardFooter with style prop', () =>
-<CardFooter
-style={{width:200, height:30}}
-    />);
+<CardFooter style={{ width:200, height:30 }}/>);
 
 storiesOf('CardFooter', module).add('CardFooter with children prop', () =>
 <CardFooter>Hello</CardFooter>);

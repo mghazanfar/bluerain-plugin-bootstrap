@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import ICard from 'bluerain-ui-interfaces/Components/Card';
 import { Card } from 'reactstrap';
+import ICard from 'bluerain-ui-interfaces/Components/Card';
 
 /**
  * The props of Card Component
@@ -22,24 +22,19 @@ import { Card } from 'reactstrap';
   * @param {boolean} props.body If true, card is generated with body specific styling.
   */
 
- export interface IBSProps {
- color?: string,
- inverse?: boolean,
- body?: boolean,
- }
+export interface IBSProps {
+	color?: string,
+	inverse?: boolean,
+	body?: boolean,
+}
 
 const BlueRainCard = (props: ICard & IBSProps) => {
-    const raisedFalse = {...props.style, border:0};
-    return (
-        <Card
-        {...props}
-        style = { !(props.raised) ? raisedFalse : props.style }
-        tag={props.tag}
-        className={props.className}
-        >
+	const raisedFalse = { ...props.style, border:0 };
+	return (
+        <Card {...props} style={!(props.raised) ? raisedFalse : props.style} tag={props.tag} className={props.className}>
         {props.children}
         </Card>
-    );
+	);
 
 };
 

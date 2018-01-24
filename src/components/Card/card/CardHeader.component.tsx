@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { ICardHeader } from 'bluerain-ui-interfaces/Components/Card';
 import { CardHeader } from 'reactstrap';
+import { ICardHeader } from 'bluerain-ui-interfaces/Components/Card';
 
 /**
  * The props of CardHeader Component
@@ -17,13 +17,11 @@ import { CardHeader } from 'reactstrap';
 
 
 const BlueRainCardHeader = (props: ICardHeader) => {
-    return (
-        <CardHeader
-        {...props}
-        >
+	return (
+        <CardHeader {...props}>
         {props.title} {props.children}
         </CardHeader>
-    );
+	);
 
 };
 

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {CardHeader} from '../../Card';
-import BR from '@blueeast/bluerain-os';
-import { storiesOf } from '@storybook/react';
+import { boolean, object, text, withKnobs } from '@storybook/addon-knobs';
+import { CardHeader } from '../../Card';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import BR from '@blueeast/bluerain-os';
 
-BR.boot({renderApp:false});
+BR.boot({ renderApp:false });
 
 const Text = BR.Components.get('Text');
 
@@ -13,11 +13,7 @@ const Image = BR.Components.get('Image');
 
 const label = text('label as child', 'with knobs');
 storiesOf('CardHeader', module).add('CardHeader with title prop', () =>
-<CardHeader
-title="Title"
-    />);
+<CardHeader title="Title"/>);
 
 storiesOf('CardHeader', module).add('CardHeader Node as title props', () =>
-<CardHeader
-title={<h1>Header</h1>}
-    />);
+<CardHeader title={<h1>Header</h1>} />);

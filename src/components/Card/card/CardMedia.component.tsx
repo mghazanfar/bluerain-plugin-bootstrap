@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { ICardMedia } from 'bluerain-ui-interfaces/Components/Card';
 import { CardImg } from 'reactstrap';
+import { ICardMedia } from 'bluerain-ui-interfaces/Components/Card';
 
 /**
  * The props of CardMedia Component
@@ -22,16 +22,14 @@ import { CardImg } from 'reactstrap';
   */
 
 export interface IBSProps {
-    top ?: boolean,
-    bottom ?: boolean,
-    }
+	top ?: boolean,
+	bottom ?: boolean,
+}
 
 const BlueRainCardMedia = (props: ICardMedia & IBSProps) => {
-    return (
-        <CardImg
-        {...props}
-        />
-    );
+	return (
+        <CardImg {...props}/>
+	);
 
 };
 

@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import IButton from 'bluerain-ui-interfaces/Components/Button';
 import { Button } from 'reactstrap';
+import IButton from 'bluerain-ui-interfaces/Components/Button';
 
 
 /**
@@ -24,25 +24,25 @@ import { Button } from 'reactstrap';
  * @param {boolean} props.large if true, large button is generated.
  */
 
- export interface IBSProps {
- tag?: () => void | string,
- size?: string,
- }
+export interface IBSProps {
+	tag?: () => void | string,
+	size?: string
+}
 
 const BlueRainButton = (props: IButton & IBSProps) => {
-    if(props.iconLeft){
-        return (
+	if(props.iconLeft){
+		return (
             <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.iconLeft} {props.children}</Button>
-        );
-    }
-    else if(props.iconRight){
-        return (
+		);
+	}
+	else if(props.iconRight){
+		return (
             <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} {...props}>{props.children} {props.iconRight}</Button>
-        );
-    }
-    return (
+		);
+	}
+	return (
         <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.children}</Button>
-    );
+	);
 
 };
 

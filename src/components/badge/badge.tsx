@@ -1,6 +1,6 @@
-import React from 'react';
 import { Badge } from 'reactstrap';
-import {IBadge} from 'bluerain-ui-interfaces/Components/Badge';
+import { IBadge } from 'bluerain-ui-interfaces/Components/Badge';
+import React from 'react';
 
 /**
  * The universal props of Badge Component
@@ -11,11 +11,11 @@ import {IBadge} from 'bluerain-ui-interfaces/Components/Badge';
  */
 
 export interface IBadgeProps {
-    color?: string;
+	color?: string;
 }
 
 const BadgeUi = (props: IBadge & IBadgeProps) => {
-    return (<Badge {...props.style}{...props}>{props.badgeContent}</Badge>);
+	return (<Badge {...props.style}{...props}>{props.badgeContent}</Badge>);
 
 };
 

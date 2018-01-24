@@ -1,13 +1,14 @@
 import * as React from 'react';
-import {DropDown, DropDownItem, DropDownToggle,DropDownMenu } from '../DropDown';
-import { storiesOf } from '@storybook/react';
+import { DropDown, DropDownItem, DropDownMenu, DropDownToggle, } from '../DropDown';
+import { boolean, object, text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
+
+import { storiesOf } from '@storybook/react';
 
 const stories = storiesOf('DropDown', module);
 stories.add('DropDown (normal)', () => {
 
-    return (
+	return (
         <DropDown isOpen={true}>
         <DropDownToggle  >
             Dropdown
@@ -21,29 +22,29 @@ stories.add('DropDown (normal)', () => {
             <DropDownItem>Another Action</DropDownItem>
         </DropDownMenu>
     </DropDown>
-    );});
+	);});
 stories.add('DropDown (with disabled)', () => {
 
-    return (
+	return (
         <DropDown isOpen={true}>
-            <DropDownToggle disabled >
+            <DropDownToggle disabled={true} >
                 Dropdown
             </DropDownToggle>
             <DropDownMenu>
-                <DropDownItem disabled>Another Action</DropDownItem>
-                <DropDownItem disabled>Another Action</DropDownItem>
-                <DropDownItem disabled>Another Action</DropDownItem>
-                <DropDownItem disabled>Another Action</DropDownItem>
-                <DropDownItem disabled>Another Action</DropDownItem>
+                <DropDownItem disabled={true}>Another Action</DropDownItem>
+                <DropDownItem disabled={true}>Another Action</DropDownItem>
+                <DropDownItem disabled={true}>Another Action</DropDownItem>
+                <DropDownItem disabled={true}>Another Action</DropDownItem>
+                <DropDownItem disabled={true}>Another Action</DropDownItem>
                 <DropDownItem>Another Action</DropDownItem>
             </DropDownMenu>
         </DropDown>
-    );});
+	);});
 stories.add('DropDown (ontoggle)', () => {
-onchange=()=>{
-    alert('hello');
-};
-    return (
+	onchange=() => {
+		alert('hello');
+	};
+	return (
         <DropDown isOpen={true} toggle={onchange} >
             <DropDownToggle >
                 Dropdown
@@ -57,5 +58,5 @@ onchange=()=>{
                 <DropDownItem>Another Action</DropDownItem>
             </DropDownMenu>
         </DropDown>
-    );});
+	);});
 

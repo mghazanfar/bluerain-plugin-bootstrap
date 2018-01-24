@@ -1,9 +1,9 @@
 /**
  * Created by Ghazal Taimur on 12/29/17.
  */
-import React from 'react';
 import { Badge } from 'reactstrap';
 import { IChip } from 'bluerain-ui-interfaces/Components/Chip';
+import React from 'react';
 
 /**
  * The props of Chip Component
@@ -14,9 +14,9 @@ import { IChip } from 'bluerain-ui-interfaces/Components/Chip';
  */
 
 export interface IChipProps {
-    color?: string;
+	color?: string;
 }
 
 const Chip = (props: IChip & IChipProps) =>
-    (<Badge style={{...props.style}} pill color={props.color} {...props}>{props.children}</Badge>);
+    (<Badge style={{ ...props.style }} pill={true} color={props.color} {...props}>{props.children}</Badge>);
 export default Chip;

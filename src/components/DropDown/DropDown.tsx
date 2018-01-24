@@ -1,5 +1,5 @@
+import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 import React ,{ ReactNode }  from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { IPicker } from 'bluerain-ui-interfaces/Components/Picker';
 
 /**
@@ -14,16 +14,16 @@ import { IPicker } from 'bluerain-ui-interfaces/Components/Picker';
  * @param {function} props.toggle callback function for toggle .
  */
 interface IReactstarpDropDown {
-    disabled?: boolean,
-    dropup?: boolean,
-    group?: boolean,
-    isOpen?: boolean,
+	disabled?: boolean,
+	dropup?: boolean,
+	group?: boolean,
+	isOpen?: boolean,
     // For Dropdown usage inside a Nav
-    nav?: boolean,
+	nav?: boolean,
     // For Dropdown usage inside a Navbar (disables popper)
-    inNavbar?: boolean,
-    tag?: string, // default: 'div' unless nav=true, then 'li'
-    toggle?: (e)=>void
+	inNavbar?: boolean,
+	tag?: string, // default: 'div' unless nav=true, then 'li'
+	toggle?: (e:any)=>void
 }
 /**
  * The props of IReactstarpDropDownToggel Component
@@ -38,17 +38,17 @@ interface IReactstarpDropDown {
  * @param {any} props.tag default: 'div' unless nav=true, then 'li'.
  */
 interface IReactstarpDropDownToggel {
-    caret?: boolean,
-    color?: boolean,
-    className?: boolean,
-    disabled?: boolean,
-    onClick?: ()=>void,
-    'data-toggle'?: boolean,
-    'aria-haspopup'?: boolean,
+	caret?: boolean,
+	color?: boolean,
+	className?: boolean,
+	disabled?: boolean,
+	onClick?: ()=>void,
+	'data-toggle'?: boolean,
+	'aria-haspopup'?: boolean,
     // For DropdownToggle usage inside a Nav
-    nav?: boolean,
+	nav?: boolean,
     // Defaults to Button component
-    tag?: any
+	tag?: any
 }
 /**
  * The props of IReactstarpDropdownMenu Component
@@ -60,11 +60,11 @@ interface IReactstarpDropDownToggel {
  * @param {object} props.cssModule for styles .
  */
 interface IReactstarpDropdownMenu {
-    tag?: string,
-    right?: boolean,
-    flip?: boolean, // default: true,
-    className?: string,
-    cssModule?: object,
+	tag?: string,
+	right?: boolean,
+	flip?: boolean, // default: true,
+	className?: string,
+	cssModule?: object,
 }
 /**
  * The props of IReactstarpDropdownItem Component
@@ -80,35 +80,35 @@ interface IReactstarpDropdownMenu {
  * @param {object} props.cssModule for styles .
  */
 interface IReactstarpDropdownItem {
-    active?: boolean,
-    disabled?: boolean,
-    divider?: boolean,
-    tag?: ()=>void| string,
-    header?: boolean,
-    onClick?: ()=>void,
-    className?: string,
-    cssModule?: object,
-    toggle?: boolean // default: true
+	active?: boolean,
+	disabled?: boolean,
+	divider?: boolean,
+	tag?: ()=>void| string,
+	header?: boolean,
+	onClick?: ()=>void,
+	className?: string,
+	cssModule?: object,
+	toggle?: boolean // default: true
 }
-const DropDown=(props:IPicker & IReactstarpDropDown)=> {
-        return (
+const DropDown=(props:IPicker & IReactstarpDropDown) => {
+	return (
             <Dropdown {...props}>{props.children}</Dropdown>
-        );
-    };
-const DropDownItem=(props:IPicker & IReactstarpDropdownItem)=> {
-    return (
+	);
+};
+const DropDownItem=(props:IPicker & IReactstarpDropdownItem) => {
+	return (
         <DropdownItem {...props} />
-    );
+	);
 };
-const DropDownToggle=(props:IPicker & IReactstarpDropDownToggel)=> {
-    return (
+const DropDownToggle=(props:IPicker & IReactstarpDropDownToggel) => {
+	return (
         <DropdownToggle {...props} />
-    );
+	);
 };
-const DropDownMenu=(props:IPicker & IReactstarpDropdownMenu)=> {
-    return (
+const DropDownMenu=(props:IPicker & IReactstarpDropdownMenu) => {
+	return (
         <DropdownMenu {...props}>{props.children}</DropdownMenu>
-    );
+	);
 };
 export {
     DropDown, DropDownItem, DropDownToggle,DropDownMenu

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import TextInput from '../../TextInput';
-import { storiesOf } from '@storybook/react';
 import { Form, FormGroup, Label } from 'reactstrap';
+import { storiesOf } from '@storybook/react';
+import TextInput from '../../TextInput';
 
 function handleTextInputChange (value: any) {
-   console.log('text input value', value.target.value);
+	console.log('text input value', value.target.value);
 }
 
 const style = { background: 'red' };
@@ -37,7 +37,7 @@ storiesOf('TextInput', module).add('with type file',
 //     () => <Form> <FormGroup> <TextInput placeholder="Readonly" readonly  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
 
 storiesOf('TextInput', module).add('with disabled',
-    () => <Form> <FormGroup> <TextInput placeholder="Disabled" disabled  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
+    () => <Form> <FormGroup> <TextInput placeholder="Disabled" disabled={true}  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
 
 storiesOf('TextInput', module).add('with editable false',
     () => <Form> <FormGroup> <TextInput placeholder="Editable" editable={false}  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
@@ -45,7 +45,7 @@ storiesOf('TextInput', module).add('with editable false',
 storiesOf('TextInput', module).add('with editable true',
     () => <Form> <FormGroup> <TextInput placeholder="Editable" editable={true}  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
 
-    storiesOf('TextInput', module).add('with style',
+storiesOf('TextInput', module).add('with style',
     () => <Form> <FormGroup> <TextInput placeholder="With Style" editable={true} style={style} onChange={handleTextInputChange} /> </FormGroup></Form>) ;
 
 // storiesOf('TextInput', module).add('with type select multiple',

@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { ICardBody } from 'bluerain-ui-interfaces/Components/Card';
 import { CardBody } from 'reactstrap';
+import { ICardBody } from 'bluerain-ui-interfaces/Components/Card';
 
 /**
  * The props of CardBody Component
@@ -15,12 +15,11 @@ import { CardBody } from 'reactstrap';
 
 
 const BlueRainCardBody = (props: ICardBody) => {
-    return (
-        <CardBody
-        {...props}>
+	return (
+        <CardBody {...props}>
         {props.children}
         </CardBody>
-    );
+	);
 };
 
 export default BlueRainCardBody;
