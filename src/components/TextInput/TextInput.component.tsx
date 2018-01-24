@@ -3,7 +3,7 @@
  */
 
 import React, {ReactNode} from 'react';
-import { ITextInput } from '@blueeast/bluerain-ui-interfaces/Components/TextInput';
+import { ITextInput } from 'bluerain-ui-interfaces/Components/TextInput';
 import { Input } from 'reactstrap';
 
 export interface IBootstrapTextInput {

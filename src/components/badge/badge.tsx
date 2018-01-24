@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from 'reactstrap';
-import {IBadge} from '@blueeast/bluerain-ui-interfaces/Components/Badge';
+import {IBadge} from 'bluerain-ui-interfaces/Components/Badge';
 
 /**
  * The universal props of Badge Component

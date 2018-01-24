@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'rc-slider/assets/index.css';
 import BR from '@blueeast/bluerain-os';
 import Slider from 'rc-slider';
-import { ISlider } from '@blueeast/bluerain-ui-interfaces/Components/Slider';
+import { ISlider } from 'bluerain-ui-interfaces/Components/Slider';
 
 /**
  * The universal props of Slider Component
@@ -31,6 +31,7 @@ const BlueRainSlider = (props:ISlider & ISwitchProps) => {
         onChange={props.onValueChange}
         onAfterChange={props.onSlidingComplete}
         className={props.className}
+        {...props}
       />
     );
 

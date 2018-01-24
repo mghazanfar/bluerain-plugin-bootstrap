@@ -158,7 +158,7 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.5.0",
-    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#master",
+    "bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#master",
     "@storybook/addon-actions": "^3.2.6",
     "@storybook/addon-graphql": "^3.2.0",
     "@storybook/addon-info": "^3.3.1",

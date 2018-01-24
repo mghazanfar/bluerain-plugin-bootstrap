@@ -7,7 +7,7 @@ const stories = storiesOf('Slider', module);
 stories.add('Slider (with knobs)', () => {
     const disabled = boolean('disabled', false);
     const defaultValue = number('defaultValue', 150);
-    return <Slider disabled={disabled} defaultValue={defaultValue} onValueChange={action('Value is changed')} maximumValue={200} minimumValue={100} onSlidingComplete={action('Sliding Complete at')}/>;
+    return <Slider disabled={disabled} defaultValue={defaultValue} onValueChange={action('Value is changed')} maximumValue={200} minimumValue={100} onSlidingComplete={action('Sliding Complete at')} style={{margin:20}}/>;
 });
 stories.add('Slider (default without knobs)', () => {
     return  (
