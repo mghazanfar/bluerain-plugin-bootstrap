@@ -1,7 +1,6 @@
 import * as React from 'react';
 import BR from '@blueeast/bluerain-os';
 
-debugger;
 const Image = BR.Components.get('Image');
 const View = BR.Components.get('View');
 const Text = BR.Components.get('Text');
