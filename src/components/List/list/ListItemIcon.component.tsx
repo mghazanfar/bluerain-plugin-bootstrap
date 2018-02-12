@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { IListItemIcon } from 'bluerain-ui-interfaces/Components/List';
+import { ListItemIconProp } from '@blueeast/bluerain-ui-interfaces';
 import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
 
 
@@ -16,7 +16,7 @@ import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
  export interface IBSProps {
      bluerain?: BlueRainType,
  }
-const ListItemIcon = (props: IListItemIcon & IBSProps) => {
+const ListItemIcon = (props: ListItemIconProp & IBSProps) => {
     const View = props.bluerain.Components.get('View');
     return (
         <View

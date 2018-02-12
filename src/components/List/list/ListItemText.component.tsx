@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { IListItemText } from 'bluerain-ui-interfaces/Components/List';
+import { ListItemTextProp } from '@blueeast/bluerain-ui-interfaces';
 import { ListGroupItemText } from 'reactstrap';
 
 /**
@@ -13,7 +13,7 @@ import { ListGroupItemText } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
-const ListItemText = (props: IListItemText) => {
+const ListItemText = (props: ListItemTextProp) => {
     return (
         <ListGroupItemText
             {...props}

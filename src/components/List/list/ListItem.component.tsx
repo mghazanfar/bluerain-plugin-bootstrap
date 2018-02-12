@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { IListItem } from 'bluerain-ui-interfaces/Components/List';
+import { ListItemProp } from '@blueeast/bluerain-ui-interfaces';
 import { ListGroupItem } from 'reactstrap';
 
 /**
@@ -32,7 +32,7 @@ import { ListGroupItem } from 'reactstrap';
     disabled?: boolean,
     }
 
-const ListItem = (props: IListItem & IBSProps) => {
+const ListItem = (props: ListItemProp & IBSProps) => {
     return (
         <ListGroupItem
             {...props}

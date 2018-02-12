@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { ICardBody } from 'bluerain-ui-interfaces/Components/Card';
+import { CardBodyProp } from '@blueeast/bluerain-ui-interfaces';
 import { CardBody } from 'reactstrap';
 
 /**
@@ -14,7 +14,7 @@ import { CardBody } from 'reactstrap';
  */
 
 
-const BlueRainCardBody = (props: ICardBody) => {
+const BlueRainCardBody = (props: CardBodyProp) => {
     return (
         <CardBody
         {...props}>

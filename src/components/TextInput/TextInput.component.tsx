@@ -3,7 +3,7 @@
  */
 
 import React, {ReactNode} from 'react';
-import { ITextInput } from 'bluerain-ui-interfaces/Components/TextInput';
+import { TextInputProp } from '@blueeast/bluerain-ui-interfaces';
 import { Input } from 'reactstrap';
 
 export interface IBootstrapTextInput {
@@ -13,7 +13,7 @@ export interface IBootstrapTextInput {
     disabled?: boolean
 }
 
-const BlueRainTextInput = (props: ITextInput & IBootstrapTextInput) => {
+const BlueRainTextInput = (props: TextInputProp & IBootstrapTextInput) => {
     if(props.multiline !== undefined && props.multiline) {
         return (
             <Input type="textarea" onClick={props.onChange} {...props} />

@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import IButton from 'bluerain-ui-interfaces/Components/Button';
+import { ButtonProp } from '@blueeast/bluerain-ui-interfaces';
 import { Button } from 'reactstrap';
 
 
@@ -29,7 +29,7 @@ import { Button } from 'reactstrap';
  size?: string,
  }
 
-const BlueRainButton = (props: IButton & IBSProps) => {
+const BlueRainButton = (props: ButtonProp & IBSProps) => {
     if(props.iconLeft){
         return (
             <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.iconLeft} {props.children}</Button>
