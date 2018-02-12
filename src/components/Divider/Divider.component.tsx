@@ -10,15 +10,9 @@ import { DividerProp } from '@blueeast/bluerain-ui-interfaces';
  * @param {ReactNode} props.inset if true, Divider is generated indented.
  */
 
-export interface MUIProps {
-	component?: React.ReactNode;
-	inset?: boolean;
-	absolute?: boolean;
-	classes?: {};
-}
-const Divider = (props: DividerProp & MUIProps) => {
+const Divider = (props: DividerProp) => {
 	return (
-        <hr />
+        <hr style={{backgroundColor: props.light?'rgba(0, 0, 0, 0.075)': 'rgba(0, 0, 0, 0.12)', height: 1, margin: 0, border: 'none', flexShrink: 0}}/>
 	);
 
 };
