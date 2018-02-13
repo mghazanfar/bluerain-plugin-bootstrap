@@ -4,7 +4,7 @@
 
 import React, {ReactNode} from 'react';
 import { TextInputProp } from '@blueeast/bluerain-ui-interfaces';
-import { Input } from 'reactstrap';
+import { Form, FormFeedback, Input } from 'reactstrap';
 
 export interface IBootstrapTextInput {
     type?: string,
@@ -16,11 +16,17 @@ export interface IBootstrapTextInput {
 const BlueRainTextInput = (props: TextInputProp & IBootstrapTextInput) => {
     if(props.multiline !== undefined && props.multiline) {
         return (
-            <Input type="textarea" onClick={props.onChange} {...props} />
+            <Form>
+                <Input type="textarea" onClick={props.onChange} valid={!props.error} {...props} />
+                <FormFeedback>{props.errorText}</FormFeedback>
+            </Form>
         );
     }
     return (
-        <Input onClick={props.onChange} disabled={!props.editable} {...props} />
+        <Form>
+            <Input onClick={props.onChange} valid={!props.error} {...props} />
+            <FormFeedback>{props.errorText}</FormFeedback>
+        </Form>
     );
 
 };

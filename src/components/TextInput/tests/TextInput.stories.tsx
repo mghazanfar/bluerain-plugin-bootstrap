@@ -16,6 +16,9 @@ storiesOf('TextInput', module).add('with placeholder, default value, onChange',
 storiesOf('TextInput', module).add('with type= textarea',
     () => <Form> <FormGroup> <TextInput placeholder="Multiline Text area" onChange={handleTextInputChange} multiline={true}  /> </FormGroup></Form>) ;
 
+storiesOf('TextInput', module).add('with error true and errorText',
+() => <Form> <FormGroup> <TextInput placeholder="Error" onChange={handleTextInputChange} error={true} errorText={'Error occured due to prop true!'}/> </FormGroup></Form>) ;
+
 storiesOf('TextInput', module).add('with type email',
     () => <Form> <FormGroup> <TextInput placeholder="Type is email" type="email" onChange={handleTextInputChange}  /> </FormGroup></Form>) ;
 
@@ -38,12 +41,6 @@ storiesOf('TextInput', module).add('with type file',
 
 storiesOf('TextInput', module).add('with disabled',
     () => <Form> <FormGroup> <TextInput placeholder="Disabled" disabled  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
-
-storiesOf('TextInput', module).add('with editable false',
-    () => <Form> <FormGroup> <TextInput placeholder="Editable" editable={false}  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
-
-storiesOf('TextInput', module).add('with editable true',
-    () => <Form> <FormGroup> <TextInput placeholder="Editable" editable={true}  onChange={handleTextInputChange} /> </FormGroup></Form>) ;
 
     storiesOf('TextInput', module).add('with style',
     () => <Form> <FormGroup> <TextInput placeholder="With Style" editable={true} style={style} onChange={handleTextInputChange} /> </FormGroup></Form>) ;
