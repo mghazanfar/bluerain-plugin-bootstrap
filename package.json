@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.5.0",
-    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/Divider",
+    "@blueeast/bluerain-ui-interfaces": "https://github.com/BlueEastCode/bluerain-ui-interfaces.git#feature/FormControl",
     "bluerain-icons": "git+ssh://git@bitbucket.org:be-iot-platform/bluerain-icons.git#develop",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
