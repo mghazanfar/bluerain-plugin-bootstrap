@@ -13,9 +13,15 @@ import { FormGroup } from 'reactstrap';
  * @param {Object} props.style style object for FormGroup's style.
  * @param {Object} props.className className for FormGroup's extended style.
  */
+export interface BSProps {
+    inline?: boolean,
+    check?: boolean,
+    disabled?: boolean,
+    tag?: React.ReactNode,
+    cssModule?: {},
+}
 
-
-const BlueRainFormGroup = (props: FormGroupProp) => {
+const BlueRainFormGroup = (props: FormGroupProp & BSProps) => {
     return (
         <FormGroup {...props} />
     );

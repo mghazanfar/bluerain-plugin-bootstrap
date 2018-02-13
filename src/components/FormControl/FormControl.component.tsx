@@ -14,8 +14,13 @@ import { Form } from 'reactstrap';
  * @param {Object} props.className className for FormControl's extended style.
  */
 
+export interface BSProps {
+    inline?: boolean,
+    innerRef?: React.ReactNode,
+    cssModule?: {},
 
-const FormControl = (props: FormControlProp) => {
+}
+const FormControl = (props: FormControlProp & BSProps) => {
     return (
         <Form {...props} />
     );
