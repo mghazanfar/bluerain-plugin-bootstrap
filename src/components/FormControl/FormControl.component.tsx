@@ -22,7 +22,7 @@ export interface BSProps {
 }
 const FormControl = (props: FormControlProp & BSProps) => {
     return (
-        <Form {...props} />
+        <Form tag={props.component} {...props} />
     );
 
 };
