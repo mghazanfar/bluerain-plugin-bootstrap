@@ -7,7 +7,7 @@
 | style | Object | | style object for button. |
 | children | Node | | Content of the button component. |
 | color | enum: 'primary', 'secondary', 'warning', 'info', 'danger', 'success', 'light', 'dark', 'link' | 'primary' | Color of button component.|
-| onClick | func | () => {} | Callback function fired when button is clicked. |
+| onPress | func | () => {} | Callback function fired when button is onPress. |
 | disabled | bool |  | If true, renders a disabled button. |
 | href | string | | href prop to move to a link. |
 | fullWidth | bool |  | If true, button is generated with 100% width of the cnotainer. |
@@ -32,7 +32,7 @@ import React from 'react';
 import Button from  'bluerain-plugin-bootstrap-ui/Button';
 
 const buttonSample = () => (
-       <Button fullWidth color='dark'>Click me!</Button>
+       <Button fullWidth color='dark'>Press me!</Button>
 );
 
 export default buttonSample;

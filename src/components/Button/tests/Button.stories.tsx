@@ -19,7 +19,7 @@ storiesOf('Button', module).add('Primary Button with knobs', () =>
 
 <Button
     color={'primary'}
-    onClick={action('I was clicked with knobs')}
+    onPress={action('I was pressed with knobs')}
     disabled={disabled}
     fullWidth={fullWidth}
     small={small}
@@ -32,13 +32,13 @@ storiesOf('Button', module).add('Default Button without Text tag in Child', () =
 
 storiesOf('Button', module).add('Secondary Button with style prop', () => <Button color="secondary" style={{backgroundColor:'purple', borderColor:'purple'}} >Customm Purple</Button>);
 
-storiesOf('Button', module).add('Light Button with onClick prop', () => <Button color="light" onClick={()=>{console.log('I was clicked');}} >onClick</Button>);
+storiesOf('Button', module).add('Light Button with onPress prop', () => <Button color="light" onPress={()=>{console.log('I was clicked');}} >onPress</Button>);
 
 storiesOf('Button', module).add('Warning Button with disabled prop true', () => <Button color="warning" disabled >Disabled</Button>);
 
 storiesOf('Button', module).add('Info Button with href prop', () => <Button color="info" href="https://www.facebook.com" >href</Button>);
 
-storiesOf('Button', module).add('Danger Button with onClick prop', () => <Button color="danger" fullWidth>FullWidth</Button>);
+storiesOf('Button', module).add('Danger Button with onPress prop', () => <Button color="danger" fullWidth>FullWidth</Button>);
 
 storiesOf('Button', module).add('Success Button with active prop true', () => <Button color="success" active>Active</Button>);
 

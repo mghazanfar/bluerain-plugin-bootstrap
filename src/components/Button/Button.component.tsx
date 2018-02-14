@@ -12,7 +12,7 @@ import { Button } from 'reactstrap';
  * @param {Node} props.children Label to be passed as child.
  * @param {Object} props.style style object for button's style.
  * @param {enum} props.color color prop of type enum. Default color is 'primary'.
- * @param {function} props.onClick callback function fired when button is pressed.
+ * @param {function} props.onPress callback function fired when button is pressed.
  * @param {boolean} props.disabled if true, renders a disabled button.
  * @param {string} props.href href prop to move to a link.
  * @param {boolean} props.fullWidth if true, button is generated with 100% width of the cnotainer.
