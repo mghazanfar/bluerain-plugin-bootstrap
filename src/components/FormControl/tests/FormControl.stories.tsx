@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FormControl, FormGroup } from '../../FormControl';
+import FormControl, { FormGroup } from '../../FormControl';
 import Button from '../../Button';
 import Input from '../../TextInput';
 import { Label } from 'reactstrap';
