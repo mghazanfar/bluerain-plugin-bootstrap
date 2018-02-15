@@ -1,11 +1,10 @@
 import React from 'react';
 import { Plugin ,bluerain} from '@blueeast/bluerain-os';
 import TextInput from './components/TextInput';
+import AppBar from './components/AppBar';
 import Button from './components/Button';
 import Avatar from './components/Avatar';
 import Breadcrumb from './components/Breadcrumb';
-import FormControl from './components/FormControl';
-import { FormGroup } from './components/FormControl';
 import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/Card';
 import Divider from './components/Divider';
 import List , { ListItem, ListHeader, ListItemAvatar, ListItemIcon, ListItemText, ListItemRightButton} from './components/List';
@@ -42,8 +41,7 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.set('ListItemRightButton', ListItemRightButton);
         ctx.Components.set('Breadcrumb', Breadcrumb);
         ctx.Components.set('Divider', Divider);
-        ctx.Components.set('FormControl', FormControl);
-        ctx.Components.set('FormGroup', FormGroup);
+        ctx.Components.set('AppBar', AppBar);
 	}
 }
 
