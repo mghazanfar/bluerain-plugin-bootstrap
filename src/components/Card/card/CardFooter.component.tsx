@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { CardFooterProp } from '@blueeast/bluerain-ui-interfaces';
+import { CardFooterProperties } from '@blueeast/bluerain-ui-interfaces';
 import { CardFooter } from 'reactstrap';
 
 /**
@@ -13,7 +13,7 @@ import { CardFooter } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
-const BlueRainCardFooter = (props: CardFooterProp) => {
+const BlueRainCardFooter: React.ComponentType<any> = (props: CardFooterProperties) => {
     return (
         <CardFooter
             {...props}

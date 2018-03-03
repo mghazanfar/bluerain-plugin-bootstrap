@@ -1,6 +1,6 @@
 import * as React from 'react';
 import BR from '@blueeast/bluerain-os';
-import { AvatarProp } from '@blueeast/bluerain-ui-interfaces';
+import { AvatarProperties } from '@blueeast/bluerain-ui-interfaces';
 
 const Image = BR.Components.get('Image');
 const View = BR.Components.get('View');
@@ -12,7 +12,7 @@ const Text = BR.Components.get('Text');
  * @param {Node} props.children children of Avatar.
  * @param {number} props.size size of Avatar.
  */
-const BlueRainAvatar = (props: AvatarProp) => {
+const BlueRainAvatar: React.ComponentType<any> = (props: AvatarProperties) => {
     const size = props.size? props.size: 70;
     const avatarStyle = [{width:size, height:size, backgroundColor:'lightgrey', borderRadius:1000, display:'flex', justifyContent:'center', alignItems:'center', fontSize:.5*size}, {...props.style}];
 if (props.children) {

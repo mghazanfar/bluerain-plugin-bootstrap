@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { CardFooterProp } from '@blueeast/bluerain-ui-interfaces';
+import { CardFooterProperties } from '@blueeast/bluerain-ui-interfaces';
 import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
 
 /**
@@ -16,7 +16,7 @@ import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
      bluerain?: BlueRainType,
  }
 
-const ListItemRightButton = (props: CardFooterProp & IBSProps) => {
+const ListItemRightButton: React.ComponentType<any> = (props: CardFooterProperties & IBSProps) => {
     const View = props.bluerain.Components.get('View');
     const Right = {...props.style, float:'right'};
     return (

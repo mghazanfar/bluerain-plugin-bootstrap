@@ -1,7 +1,7 @@
 import React from 'react';
 import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { BreadcrumbProp } from '@blueeast/bluerain-ui-interfaces';
+import { BreadcrumbProperties } from '@blueeast/bluerain-ui-interfaces';
 
 /**
  * The props of Breadcrumb Component
@@ -28,7 +28,7 @@ const styles = {
 	},
 };
 
-const BlueRainBreadcrumb = (props: BreadcrumbProp) => {
+const BlueRainBreadcrumb: React.ComponentType<any> = (props: BreadcrumbProperties) => {
 
 	const label = props.label ? props.label : 'Home';
 

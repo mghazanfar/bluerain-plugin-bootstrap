@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { ListHeaderProp } from '@blueeast/bluerain-ui-interfaces';
+import { ListHeaderProperties } from '@blueeast/bluerain-ui-interfaces';
 import { ListGroupItemHeading } from 'reactstrap';
 
 /**
@@ -13,7 +13,7 @@ import { ListGroupItemHeading } from 'reactstrap';
  */
 
 
-const ListHeader = (props: ListHeaderProp) => {
+const ListHeader: React.ComponentType<any> = (props: ListHeaderProperties) => {
     return (
         <ListGroupItemHeading
             {...props}

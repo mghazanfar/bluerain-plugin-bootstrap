@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { ListItemAvatarProp } from '@blueeast/bluerain-ui-interfaces';
+import { ListItemAvatarProperties } from '@blueeast/bluerain-ui-interfaces';
 import Avatar from '../../Avatar';
 
 /**
@@ -14,7 +14,7 @@ import Avatar from '../../Avatar';
  * @param {string} props.src src of the image.
  */
 
-const ListItemAvatar = (props: ListItemAvatarProp) => {
+const ListItemAvatar: React.ComponentType<any> = (props: ListItemAvatarProperties) => {
     return (
         <Avatar
         {...props}

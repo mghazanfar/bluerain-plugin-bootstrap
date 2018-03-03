@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import { ListProp } from '@blueeast/bluerain-ui-interfaces';
+import { ListProperties } from '@blueeast/bluerain-ui-interfaces';
 import { ListGroup } from 'reactstrap';
 
 /**
@@ -21,7 +21,7 @@ import { ListGroup } from 'reactstrap';
  className?: string,
  }
 
-const List = (props: ListProp & IBSProps) => {
+const List: React.ComponentType<any> = (props: ListProperties & IBSProps) => {
     return (
         <ListGroup
             style = {props.style}

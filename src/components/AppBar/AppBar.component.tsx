@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppBarProp } from '@blueeast/bluerain-ui-interfaces';
+import { AppBarProperties } from '@blueeast/bluerain-ui-interfaces';
 import {
 	Collapse,
 	Navbar,
@@ -26,14 +26,14 @@ import {
  */
 
 
-export interface BSProps {
+export interface BSProps extends AppBarProperties {
 	color?: 'primary' | 'success' | 'secondary' | 'light' | 'dark' | 'danger' | 'info' | 'warning' | undefined,
 	position?: 'fixed' | 'sticky' ,
 	expand?: 'xl' | 'lg' | 'md' | 'sm' | 'md',
 	logo?: React.ReactNode,
 }
 
-class AppBar extends React.Component<AppBarProp & BSProps, { isOpen: boolean }> {
+class AppBar extends React.Component<BSProps, { isOpen: boolean }> {
 	constructor(props) {
 	  super(props);
 	  this.toggle = this.toggle.bind(this);
