@@ -6,6 +6,7 @@ import Button from './components/Button';
 import Avatar from './components/Avatar';
 import Breadcrumb from './components/Breadcrumb';
 import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/Card';
+import Checkbox from './components/Checkbox';
 import Divider from './components/Divider';
 import List , { ListItem, ListHeader, ListItemAvatar, ListItemIcon, ListItemText, ListItemRightButton} from './components/List';
 
@@ -30,6 +31,7 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.set('CardMedia', CardMedia);
         ctx.Components.set('CardBody', CardBody);
         ctx.Components.set('CardFooter', CardFooter);
+        ctx.Components.set('Checkbox', Checkbox);
         ctx.Components.has('TextInput') ? ctx.Components.replace('TextInput', TextInput) : ctx.Components.set('TextInput', TextInput);
 		ctx.Components.set('Avatar', Avatar);
         ctx.Components.set('List', List);
