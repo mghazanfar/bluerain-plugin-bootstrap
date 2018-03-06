@@ -12,7 +12,7 @@ const Checkbox: React.ComponentType<any> = (props: CheckboxProperties) => {
     <Form>
         <FormGroup check>
             <Label check>
-            <Input type="checkbox" onClick={props.onPress} disabled={props.disabled} {...props}/> {' '}
+            <Input type="checkbox" onClick={props.onChange} disabled={props.disabled} {...props}/> {' '}
             {props.label}
             </Label>
         </FormGroup>
