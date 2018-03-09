@@ -8,7 +8,6 @@ import { ListItem } from '../List';
 import { PickerProperties } from '@blueeast/bluerain-ui-interfaces';
 
 export interface BSProps extends PickerProperties{
-  value?: React.ReactNode,
   children: Array<any>,
   }
   
@@ -19,7 +18,7 @@ export interface BSProps extends PickerProperties{
       this.toggle = this.toggle.bind(this);
       this.state = {
         dropdownOpen: false,
-        value: props.value || 'Dropdown'
+        value: props.selectedValue || 'Dropdown'
       };
     }
   
@@ -30,7 +29,7 @@ export interface BSProps extends PickerProperties{
     }
 
     handleChange = event => {
-
+      // TODO: Dropdown updates the value when it is a text. It does not show if a listItem is selected. This needs to be reviised.
       this.setState({value: event.target.innerHTML});
       this.props.onValueChange? this.props.onValueChange(): this.setState({value: event.target.innerHTML});
     }

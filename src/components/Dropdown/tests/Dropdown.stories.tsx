@@ -17,16 +17,21 @@ const Item = <View style={{flexDirection: 'row'}}>
 <Text>{'Abdul Rehman'}</Text>
 </View>;
 
+
+const Item2 = <View style={{flexDirection: 'row'}}>
+Hello
+</View>;
+
 storiesOf('Dropdown', module).add('general',
     () => 
-    <Dropdown onValueChange={onChange} value={'hello'} style={style.dropdown}>
+    <Dropdown onValueChange={onChange} selectedValue={'hello'} style={style.dropdown}>
         {['Item1', 'Item2', 'Item3']}
     </Dropdown> ) ;
 
 
 storiesOf('Dropdown', module).add('specific story',
 () => 
-<Dropdown onValueChange={onChange} value={'hello'} style={style.dropdown}>
-    {[Item, Item, Item]}
+<Dropdown onValueChange={onChange} selectedValue={'hello'} style={style.dropdown}>
+    {[Item, Item2, Item]}
 </Dropdown> ) ;
 
