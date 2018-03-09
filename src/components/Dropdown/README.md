@@ -14,7 +14,7 @@
 
 ```JavaScript
 import React from 'react';
-import  { BlueRainConsumer, BlueRain } from  '@blueeast/bluerain-os';
+import  { BlueRainConsumer, BlueRain } from '@blueeast/bluerain-os';
 
 const DropDown = () => {
     return(
