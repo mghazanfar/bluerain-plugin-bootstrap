@@ -4,13 +4,15 @@
 
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { ListItem } from '../List';
 import { PickerProperties } from '@blueeast/bluerain-ui-interfaces';
 
 export interface BSProps extends PickerProperties{
-  value?: React.ReactNode;
+  value?: React.ReactNode,
+  children: Array<any>,
   }
   
-  export default class DropDown extends React.Component<BSProps, {dropdownOpen: boolean, value: React.ReactNode}> {
+  export default class DropDown extends React.Component<BSProps, {dropdownOpen: boolean, value: any}> {
     constructor(props:BSProps) {
       super(props);
   
@@ -28,18 +30,22 @@ export interface BSProps extends PickerProperties{
     }
 
     handleChange = event => {
-      this.setState({ value: event.target.value });
-      this.props.onValueChange;
-      };
+
+      this.setState({value: event.target.innerHTML});
+      this.props.onValueChange? this.props.onValueChange(): this.setState({value: event.target.innerHTML});
+    }
   
     render() {
+      const listItems = this.props.children.map((item, index) =>
+        <DropdownItem onClick={this.handleChange} key={index}>{item}</DropdownItem>);
+        
       return (
         <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} style={this.props.style}>
           <DropdownToggle caret>
             {this.state.value}
           </DropdownToggle>
           <DropdownMenu>
-          {this.props.children}
+            {listItems}
           </DropdownMenu>
         </Dropdown>
       );
