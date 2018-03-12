@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { CardFooterProperties } from '@blueeast/bluerain-ui-interfaces';
-import { CardFooter } from 'reactstrap';
+import { ListItemTextProperties } from '@blueeast/bluerain-ui-interfaces';
+import { ListGroupItemText } from 'reactstrap';
 
 /**
  * The props of CardBody Component
@@ -13,15 +13,15 @@ import { CardFooter } from 'reactstrap';
  * @param {string} props.className className for styling component with css.
  */
 
-const BlueRainCardFooter: React.ComponentType<any> = (props: CardFooterProperties) => {
+const ListItemText: React.ComponentType<any> = (props: ListItemTextProperties) => {
     return (
-        <CardFooter
+        <ListGroupItemText
             {...props}
         >
         {props.children}
-        </CardFooter>
+        </ListGroupItemText>
     );
 
 };
 
-export default BlueRainCardFooter;
+export default ListItemText;

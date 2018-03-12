@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import ICard from '@blueeast/bluerain-ui-interfaces/Components/Card';
+import { CardProperties } from '@blueeast/bluerain-ui-interfaces';
 import { Card } from 'reactstrap';
 
 /**
@@ -28,7 +28,7 @@ import { Card } from 'reactstrap';
  body?: boolean,
  }
 
-const BlueRainCard = (props: ICard & IBSProps) => {
+const BlueRainCard: React.ComponentType<any> = (props: CardProperties & IBSProps) => {
     const raisedFalse = {...props.style, border:0};
     return (
         <Card

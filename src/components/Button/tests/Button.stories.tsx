@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
 
-BR.boot({renderApp:false})
+BR.boot({renderApp:false});
 
 const Text = BR.Components.get('Text');
 
@@ -15,7 +15,7 @@ const label = text('label as child', 'with knobs');
 const disabled = boolean('disabled', false);
 const fullWidth = boolean('fullWidth', false);
 const small = boolean('small', false);
-storiesOf('Button', module).add('Primary Button with knobs', () => 
+storiesOf('Button', module).add('Primary Button with knobs', () =>
 
 <Button
     color={'primary'}
@@ -32,7 +32,7 @@ storiesOf('Button', module).add('Default Button without Text tag in Child', () =
 
 storiesOf('Button', module).add('Secondary Button with style prop', () => <Button color="secondary" style={{backgroundColor:'purple', borderColor:'purple'}} >Customm Purple</Button>);
 
-storiesOf('Button', module).add('Light Button with onClick prop', () => <Button color="light" onClick={()=>{console.log('I was clicked')}} >onClick</Button>);
+storiesOf('Button', module).add('Light Button with onClick prop', () => <Button color="light" onClick={()=>{console.log('I was clicked');}} >onClick</Button>);
 
 storiesOf('Button', module).add('Warning Button with disabled prop true', () => <Button color="warning" disabled >Disabled</Button>);
 
@@ -47,6 +47,7 @@ storiesOf('Button', module).add('Default Button with bordered prop true', () => 
 storiesOf('Button', module).add('Link Button ', () => <Button color="link" >Link</Button>);
 
 storiesOf('Button', module).add('Rounded Button ', () => <Button color="dark">Rounded</Button>);
+storiesOf('Button', module).add('Transparent Button with icon as child', () => <Button style={{backgroundColor:'transparent', boxShadow:'none', border:0}} ><img src="https://getbootstrap.com/assets/img/bootstrap-stack.png" width="35" height="35"/></Button>);
 
 storiesOf('Button', module).add('Warning Button with iconLeft prop', () => <Button color="warning" iconLeft={<img src="https://getbootstrap.com/assets/img/bootstrap-stack.png" width="15" height="15"/>} >Icon Left</Button>);
 

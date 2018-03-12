@@ -3,7 +3,7 @@
  */
 
 import * as React from 'react';
-import IButton from '@blueeast/bluerain-ui-interfaces/Components/Button';
+import { ButtonProperties } from '@blueeast/bluerain-ui-interfaces';
 import { Button } from 'reactstrap';
 
 
@@ -24,12 +24,12 @@ import { Button } from 'reactstrap';
  * @param {boolean} props.large if true, large button is generated.
  */
 
- export interface BSProps {
- tag?: Function | string | undefined,
+ export interface IBSProps {
+ tag?: ()=> void | string | undefined,
  size?: string,
  }
- 
-const BlueRainButton = (props: IButton & BSProps) => {
+
+const BlueRainButton: React.ComponentType<any> = (props: ButtonProperties & IBSProps) => {
     if(props.iconLeft){
         return (
             <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.iconLeft} {props.children}</Button>
@@ -44,6 +44,6 @@ const BlueRainButton = (props: IButton & BSProps) => {
         <Button color={props.color==='default' || !(props.color) ? 'primary': props.color} block={props.fullWidth} outline={props.bordered} size={props.large ? 'lg' : props.small ? 'sm' : ''} {...props}>{props.children}</Button>
     );
 
-}
+};
 
 export default BlueRainButton;
