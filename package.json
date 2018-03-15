@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@blueeast/bluerain-os": "^0.5.0",
-    "@blueeast/bluerain-ui-interfaces": "^3.1.4",
+    "@blueeast/bluerain-ui-interfaces": "^3.2.0",
     "bluerain-icons": "git+ssh://git@bitbucket.org:be-iot-platform/bluerain-icons.git#develop",
     "@storybook/addon-info": "^3.3.1",
     "@storybook/addon-knobs": "^3.3.1",
