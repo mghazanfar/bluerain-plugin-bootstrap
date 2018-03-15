@@ -12,7 +12,6 @@ export interface MUIModalProperties extends ModalProperties{
   toggle? :()=>void
   className?:object
 }
-
 class ModalComponent extends React.Component<MUIModalProperties > {
 
 render(){
