@@ -19,7 +19,7 @@ render(){
   console.log("Modal",this.props.isOpen);
   
    return(
-    <Modal isOpen={this.props.isOpen} toggle={this.props.toggle}>
+    <Modal isOpen={this.props.isOpen} toggle={this.props.toggle} className={this.props.className}>
      {this.props.children}   
  </Modal>
        
