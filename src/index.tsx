@@ -35,9 +35,9 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.has('TextInput') ? ctx.Components.replace('TextInput', TextInput) : ctx.Components.set('TextInput', TextInput);
 		ctx.Components.set('Avatar', Avatar);
         ctx.Components.set('Modal', Modal);
-         ctx.Components.set('DialogHeader',ModalHeader);
-         ctx.Components.set('DialogBody', ModalBody);
-         ctx.Components.set('DialogFooter', ModalFooter);
+         ctx.Components.set('ModalHeader',ModalHeader);
+         ctx.Components.set('ModalBody', ModalBody);
+         ctx.Components.set('ModalFooter', ModalFooter);
         ctx.Components.set('List', List);
         ctx.Components.set('ListItem', ListItem);
         ctx.Components.set('ListHeader', ListHeader);
