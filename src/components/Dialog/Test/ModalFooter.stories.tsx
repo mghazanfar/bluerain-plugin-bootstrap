@@ -1,14 +1,12 @@
-import * as React from 'react';
-import { boolean, object, text, withKnobs } from '@storybook/addon-knobs';
-import DialogComponent from '../Dialog Story';
-import { action } from '@storybook/addon-actions';
+import  React from 'react';
+import DialogComponent from '../ModalStory';
 import { storiesOf } from '@storybook/react';
-import  DialogFooter from '../DialogFooter.Component';
+import  DialogFooter from '../ModalFooter.Component';
 import BlueRainButton    from '../../Button';
 
-const stories = storiesOf('DialogComponent', module);
+const stories = storiesOf('Modal', module);
 
-stories.add('DialogFooter', () => {
+stories.add('ModalFooter', () => {
   const Handler =() => {
 	alert('clicked');
 	};

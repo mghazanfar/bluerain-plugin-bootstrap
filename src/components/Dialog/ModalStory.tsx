@@ -1,12 +1,9 @@
-// import React from 'react';
- import ModalComponent from './Dialog.Component';
- import ModalBodyComponent from './DialogBody.Component'
- import  ModalFooterComponent from './DialogFooter.Component'
- import  ModalHeaderComponent from './DialogHeader.Component'
+ import ModalComponent from './Modal.Component';
+ import ModalBodyComponent from './ModalBody.Component'
+ import  ModalFooterComponent from './ModalFooter.Component'
+ import  ModalHeaderComponent from './ModalHeader.Component'
  import Button from '../Button/index'
-import React from 'react';
-//import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
+ import React from 'react';
 
 interface state{
   modal:boolean

@@ -9,7 +9,7 @@ import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/
 import Checkbox from './components/Checkbox';
 import Divider from './components/Divider';
 import List , { ListItem, ListHeader, ListItemAvatar, ListItemIcon, ListItemText, ListItemRightButton} from './components/List';
-import {Dialog,DialogBody,DialogFooter,DialogHeader}from './components/Dialog'
+import {Modal,ModalBody,ModalFooter,ModalHeader}from './components/Dialog'
 /**
  * Bootstrap Plugin
  * @property {string} pluginName "BootstrapPlugin"
@@ -34,10 +34,10 @@ class BootstrapPlugin extends Plugin {
         ctx.Components.set('Checkbox', Checkbox);
         ctx.Components.has('TextInput') ? ctx.Components.replace('TextInput', TextInput) : ctx.Components.set('TextInput', TextInput);
 		ctx.Components.set('Avatar', Avatar);
-        ctx.Components.set('Dialog', Dialog);
-        ctx.Components.set('DialogHeader', DialogHeader);
-        ctx.Components.set('DialogBody', DialogBody);
-        ctx.Components.set('DialogFooter', DialogFooter);
+        ctx.Components.set('Modal', Modal);
+         ctx.Components.set('DialogHeader',ModalHeader);
+         ctx.Components.set('DialogBody', ModalBody);
+         ctx.Components.set('DialogFooter', ModalFooter);
         ctx.Components.set('List', List);
         ctx.Components.set('ListItem', ListItem);
         ctx.Components.set('ListHeader', ListHeader);

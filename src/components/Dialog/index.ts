@@ -1,12 +1,12 @@
-import DialogComponent from './Dialog.Component';
-export { DialogComponent as Dialog };
+import Modal from './Modal.Component';
+export { Modal };
 
-import   ModalHeaderComponent from   './DialogHeader.Component';
-export { ModalHeaderComponent as DialogHeader };
+ import   ModalHeader from   './ModalHeader.Component';
+ export { ModalHeader };
 
-import ModalBodyComponent   from './DialogBody.Component';
-export { ModalBodyComponent as DialogBody };
+ import ModalBody   from './ModalBody.Component';
+ export { ModalBody  };
 
-import  ModalFooterComponent from  './DialogFooter.Component';
-export { ModalFooterComponent as DialogFooter };
+ import  ModalFooter from  './ModalFooter.Component';
+ export { ModalFooter  };
 
