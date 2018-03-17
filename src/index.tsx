@@ -9,7 +9,7 @@ import Card , { CardBody, CardHeader, CardMedia, CardFooter} from './components/
 import Checkbox from './components/Checkbox';
 import Divider from './components/Divider';
 import List , { ListItem, ListHeader, ListItemAvatar, ListItemIcon, ListItemText, ListItemRightButton} from './components/List';
-import {Modal,ModalBody,ModalFooter,ModalHeader}from './components/Modal'
+import { Modal, ModalBody, ModalFooter, ModalHeader }from './components/Modal'
 /**
  * Bootstrap Plugin
  * @property {string} pluginName "BootstrapPlugin"
