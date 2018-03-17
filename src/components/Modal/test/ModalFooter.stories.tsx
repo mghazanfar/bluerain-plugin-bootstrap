@@ -1,5 +1,4 @@
 import  React from 'react';
-import DialogComponent from '../ModalStory';
 import { storiesOf } from '@storybook/react';
 import  DialogFooter from '../ModalFooter.Component';
 import BlueRainButton    from '../../Button';
