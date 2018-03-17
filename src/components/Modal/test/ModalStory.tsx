@@ -1,17 +1,16 @@
- import ModalComponent from './Modal.Component';
- import ModalBodyComponent from './ModalBody.Component'
- import  ModalFooterComponent from './ModalFooter.Component'
- import  ModalHeaderComponent from './ModalHeader.Component'
- import Button from '../Button/index'
+ import ModalComponent from '../Modal.Component';
+ import ModalBodyComponent from '../ModalBody.Component'
+ import  ModalFooterComponent from '../ModalFooter.Component'
+ import  ModalHeaderComponent from '../ModalHeader.Component'
+ import Button from '../../Button/index'
  import React from 'react';
 
 interface state{
-  modal:boolean
+  modal: boolean
 }
 interface props{}
 
-  
-  class ModalExample extends React.Component<props,state> {
+class ModalExample extends React.Component<props,state> {
     constructor(props) {
       super(props);
       this.state = {

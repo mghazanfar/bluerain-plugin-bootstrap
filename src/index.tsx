@@ -19,36 +19,33 @@ class BootstrapPlugin extends Plugin {
 
 	static pluginName = 'BootstrapPlugin';
 	static slug = 'bootstrap';
+    static components={
+        
+        Button,
+        Card,
+        CardHeader,
+        CardMedia,
+        CardBody,
+        CardFooter,
+        Checkbox,
+        TextInput,
+		Avatar,
+        //Modal,
+       // ModalHeader,
+       // ModalBody,
+        // ModalFooter,
+        // List,
+        ListItem,
+        ListHeader,
+        ListItemAvatar,
+        ListItemIcon,
+        ListItemText,
+        ListItemRightButton,
+        Breadcrumb,
+        Divider,
+        AppBar
+    }
 
-	static initialize(config = {}, ctx:bluerain) {
-		let theme = ctx.Configs.get('theme');
-		if (!theme) {
-			theme = {};
-		}
-        ctx.Components.has('Button') ? ctx.Components.replace('Button', Button) : ctx.Components.set('Button', Button);
-        ctx.Components.set('Card', Card);
-        ctx.Components.set('CardHeader', CardHeader);
-        ctx.Components.set('CardMedia', CardMedia);
-        ctx.Components.set('CardBody', CardBody);
-        ctx.Components.set('CardFooter', CardFooter);
-        ctx.Components.set('Checkbox', Checkbox);
-        ctx.Components.has('TextInput') ? ctx.Components.replace('TextInput', TextInput) : ctx.Components.set('TextInput', TextInput);
-		ctx.Components.set('Avatar', Avatar);
-        ctx.Components.set('Modal', Modal);
-        ctx.Components.set('ModalHeader',ModalHeader);
-        ctx.Components.set('ModalBody', ModalBody);
-        ctx.Components.set('ModalFooter', ModalFooter);
-        ctx.Components.set('List', List);
-        ctx.Components.set('ListItem', ListItem);
-        ctx.Components.set('ListHeader', ListHeader);
-        ctx.Components.set('ListItemAvatar', ListItemAvatar);
-        ctx.Components.set('ListItemIcon', ListItemIcon);
-        ctx.Components.set('ListItemText', ListItemText);
-        ctx.Components.set('ListItemRightButton', ListItemRightButton);
-        ctx.Components.set('Breadcrumb', Breadcrumb);
-        ctx.Components.set('Divider', Divider);
-        ctx.Components.set('AppBar', AppBar);
-	}
 }
 
 export default BootstrapPlugin;

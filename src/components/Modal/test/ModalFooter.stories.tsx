@@ -6,9 +6,8 @@ import BlueRainButton    from '../../Button';
 const stories = storiesOf('Modal', module);
 
 stories.add('ModalFooter', () => {
-  const Handler =() => {
-	alert('clicked');
-	};
+  const Handler =() => alert('clicked');
+	
 	return(
    	<DialogFooter>
 				<BlueRainButton onPress={Handler} color="primary" >

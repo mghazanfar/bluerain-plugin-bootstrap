@@ -2,9 +2,9 @@ import React from 'react';
 import { ModalFooterProperties } from '@blueeast/bluerain-ui-interfaces';
 import {  ModalFooter } from 'reactstrap';
 
-const  ModalFooterComponent =(props:ModalFooterProperties)=> {
+const ModalFooterComponent: React.StatelessComponent<ModalFooterProperties> = (props:ModalFooterProperties)=> {
     return(
-        <ModalFooter>
+        <ModalFooter {...props}>
             {props.children}
         </ModalFooter>
     );
