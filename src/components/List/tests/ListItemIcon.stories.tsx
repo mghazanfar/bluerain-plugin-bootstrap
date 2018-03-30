@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ListItemIcon } from '../../List';
-import { Favorite } from 'bluerain-icons';
+// import { Favorite } from 'bluerain-icons';
 import BR from '@blueeast/bluerain-os';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -10,4 +10,4 @@ BR.boot({renderApp:false});
 
 
 storiesOf('ListItemIcon', module).add('ListItemIcon with Icon as child', () =>
-<ListItemIcon><Favorite/></ListItemIcon>);
+<ListItemIcon></ListItemIcon>);
