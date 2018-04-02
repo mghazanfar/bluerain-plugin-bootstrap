@@ -1,1 +1,1 @@
-export { ColorPicker } from './ColorPicker.component';
+export { default as ColorPicker } from './ColorPicker.component';

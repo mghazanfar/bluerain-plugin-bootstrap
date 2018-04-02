@@ -1,6 +1,6 @@
 import * as React from 'react';
-import List, { ListItem, ListItemText, ListItemAvatar, ListItemIcon, ListItemRightButton, ListHeader } from '../../List';
-import Button from '../../Button';
+import { List, ListItem, ListItemText, ListItemAvatar, ListItemIcon, ListItemRightButton, ListHeader } from '../../List';
+import { Button } from '../../Button';
 import BR from '@blueeast/bluerain-os';
 // import { Favorite } from 'bluerain-icons';
 import { storiesOf } from '@storybook/react';

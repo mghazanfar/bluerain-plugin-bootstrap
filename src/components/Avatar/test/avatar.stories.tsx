@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Avatar from '../../Avatar';
+import { Avatar } from '../../Avatar';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 // import { Favorite } from 'bluerain-icons';

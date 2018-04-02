@@ -14,7 +14,7 @@ import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
  */
 
  export interface IBSProps {
-     bluerain?: BlueRainType,
+     bluerain: BlueRainType,
  }
 const ListItemIcon: React.ComponentType<any> = (props: ListItemIconProperties & IBSProps) => {
     const View = props.bluerain.Components.get('View');

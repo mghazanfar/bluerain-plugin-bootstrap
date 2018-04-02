@@ -2,9 +2,9 @@ import * as React from 'react';
 import { number,  text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import AppBar from '../../AppBar';
+import { AppBar } from '../../AppBar';
 // import { Favorite } from 'bluerain-icons';
-import Button from '../../Button';
+import { Button } from '../../Button';
 import {
 	NavItem,
 	NavLink,

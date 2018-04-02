@@ -6,7 +6,7 @@ import BR, { BlueRainProvider } from '@blueeast/bluerain-os';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // Add BlueRain
-const BluerainApp = BR.boot({ renderApp: false });
+const BluerainApp = BR.boot({platform: [require('@blueeast/bluerain-platform-reactxp')], renderApp: false });
 const BlueRainDecorator = (storyFn) => (<BlueRainProvider>{storyFn()}</BlueRainProvider>);
 addDecorator(BlueRainDecorator);
 

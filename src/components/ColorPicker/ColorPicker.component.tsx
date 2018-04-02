@@ -1,18 +1,19 @@
-import { BlueRain, BlueRainConsumer } from '@blueeast/bluerain-os';
+import { BlueRain, BlueRainConsumer, withBlueRain } from '@blueeast/bluerain-os';
 import { ChromePicker, SketchPicker } from 'react-color';
 import { ColorPickerProperties } from '@blueeast/bluerain-ui-interfaces';
 import { styles } from './pickerStyles';
-import Button from '../Button';
+import { Button } from '../Button';
 import React from 'react';
 
-export interface MUIProps extends ColorPickerProperties {
+export interface BSProps extends ColorPickerProperties {
 	value?:{ h?: number, s?: number, l?: number, r?: number, g?: number, b?: number, a?: number } | string,
 	hs: boolean,
+	bluerain: BlueRain;
 }
 
-class ColorPicker extends React.Component<MUIProps, {color?:{h?: number, s?: number, l?: number, r?: number, g?: number, b?: number, a?: number } | string, displayColorPicker: boolean}> {
+class ColorPicker extends React.Component<BSProps, { color?: { h?: number, s?: number, l?: number, r?: number, g?: number, b?: number, a?: number } | string, displayColorPicker: boolean}> {
 
-	constructor (props:MUIProps) {
+	constructor (props:BSProps) {
 		super(props);
 		this.state= {
 			displayColorPicker: false,
@@ -44,6 +45,8 @@ class ColorPicker extends React.Component<MUIProps, {color?:{h?: number, s?: num
 	}
 
 	render() {
+		const View = this.props.bluerain.Components.get('View');
+		const Text = this.props.bluerain.Components.get('Text');
 
 		let backgroundColor = 'blue';
 		if (this.props.hs) {
@@ -55,46 +58,41 @@ class ColorPicker extends React.Component<MUIProps, {color?:{h?: number, s?: num
 				else {
 					if (!(this.state.color.h)) {
 						return (
-						<BlueRainConsumer>{(BR:BlueRain) => (
-							<BR.Components.View>
-								<BR.Components.Text style={styles.handleError}>{'"Error: Pass prop "value" in hsl format as prop "hs" is true, demanding hsl values."'}</BR.Components.Text>
-							</BR.Components.View>)}
-						</BlueRainConsumer>);
-					}
+							<View>
+								<Text style={styles.handleError}>{'"Error: Pass prop "value" in hsl format as prop "hs" is true, demanding hsl values."'}</Text>
+							</View>)};
 					const bgS = (this.state.color.s || 0.5) * 100;
 					const bgL = (this.state.color.l || 0.5) * 100;
 					backgroundColor = `hsl(${this.state.color.h}, ${bgS}%, ${bgL}%)`;
+					}
 				}
 			}
-		} else if (this.state.color) {
+		else if (this.state.color) {
 				backgroundColor = typeof this.state.color === 'string' ? this.state.color : `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`;
 		}
 
 		return (
-			<BlueRainConsumer>{(BR:BlueRain) => (
-				<BR.Components.View style={styles.colorControl}>
-					<BR.Components.Text>{this.props.label}</BR.Components.Text>
-					<BR.Components.View style={styles.onLeft}>
-						<BR.Components.View elevation={2} style={styles.padding5}>
+				<View style={styles.colorControl}>
+					<Text>{this.props.label}</Text>
+					<View style={styles.onLeft}>
+						<View elevation={2} style={styles.padding5}>
 							<Button
 									raised={true}
 									style={{ display:'flex', justifyContent:'center', backgroundColor, minHeight: 14, minWidth: 36 }}
 									onClick={this.handleClick}
 							/>
-							{ this.state.displayColorPicker ? <BR.Components.View elevation={2}>
-								<BR.Components.View style={styles.popover}>
-									<BR.Components.View style={styles.cover} onPress={this.handleClose} />
+							{ this.state.displayColorPicker ? <View elevation={2}>
+								<View style={styles.popover}>
+									<View style={styles.cover} onPress={this.handleClose} />
 									{this.getColorPicker(this.props.hs, backgroundColor)}
-								</BR.Components.View>
-							</BR.Components.View> : null}
-						</BR.Components.View>
-				</BR.Components.View>
-			</BR.Components.View>
-)}
-  </BlueRainConsumer>
+								</View>
+							</View> : null}
+						</View>
+				</View>
+			</View>
 		);
 
 	}
 }
 
-export { ColorPicker };
+export default withBlueRain(ColorPicker);
