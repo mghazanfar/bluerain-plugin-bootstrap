@@ -15,7 +15,6 @@ export const styles = {
 	},
 	popover: {
 		overflow: 'visible',
-		position: 'absolute',
 		zIndex: '2',
 		marginTop: 4.5
 	},
@@ -35,8 +34,11 @@ export const styles = {
 		display: 'flex',
 		justifyContent: 'center'
 	},
+	overflowVisible: {
+		overflow: 'visible',
+	},
 	padding5: {
-		padding: 5
+		padding: 5,
 	},
 	buttonOverlay: {
 		height: 14

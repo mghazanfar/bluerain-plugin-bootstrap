@@ -75,13 +75,13 @@ class ColorPicker extends React.Component<BSProps, { color?: { h?: number, s?: n
 				<View style={styles.colorControl}>
 					<Text>{this.props.label}</Text>
 					<View style={styles.onLeft}>
-						<View elevation={2} style={styles.padding5}>
-							<Button
-									raised={true}
-									style={{ display:'flex', justifyContent:'center', backgroundColor, minHeight: 14, minWidth: 36 }}
-									onClick={this.handleClick}
+						<View elevation={2} style={[styles.padding5, styles.overflowVisible]}>
+							<View
+									style={{ display:'flex', justifyContent:'center', backgroundColor, minHeight: 14, maxWidth: 36, width: 36, cursor: 'pointer', borderWidth: 1, borderColor: 'lightgray', borderStyle: 'solid', borderRadius: 2 }}
+									onPress={this.handleClick}
 							/>
-							{ this.state.displayColorPicker ? <View elevation={2}>
+							{ this.state.displayColorPicker ?
+							<View style={styles.overflowVisible}>
 								<View style={styles.popover}>
 									<View style={styles.cover} onPress={this.handleClose} />
 									{this.getColorPicker(this.props.hs, backgroundColor)}
