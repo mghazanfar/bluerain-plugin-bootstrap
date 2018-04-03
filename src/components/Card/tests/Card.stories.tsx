@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Card, { CardMedia, CardBody, CardFooter, CardHeader } from '../../Card';
-import Button from '../../Button';
+import { Card, CardMedia, CardBody, CardFooter, CardHeader } from '../../Card';
+import { Button } from '../../Button';
 import BR from '@blueeast/bluerain-os';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';

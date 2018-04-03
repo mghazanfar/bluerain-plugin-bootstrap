@@ -1,8 +1,8 @@
 import * as React from 'react';
-import List, { ListItem, ListItemText, ListItemAvatar, ListItemIcon, ListItemRightButton, ListHeader } from '../../List';
-import Button from '../../Button';
+import { List, ListItem, ListItemText, ListItemAvatar, ListItemIcon, ListItemRightButton, ListHeader } from '../../List';
+import { Button } from '../../Button';
 import BR from '@blueeast/bluerain-os';
-import { Favorite } from 'bluerain-icons';
+// import { Favorite } from 'bluerain-icons';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, object} from '@storybook/addon-knobs';
@@ -86,7 +86,7 @@ storiesOf('List', module).add('BlueRainList', () =>
     <ListItem active>
         <ListItemRightButton><Button color="dark">Dark</Button></ListItemRightButton>
         <View style={{flexDirection:'row', }}>
-        <ListItemIcon><Favorite /></ListItemIcon>
+        {/* <ListItemIcon><Favorite /></ListItemIcon> */}
         <ListHeader style={{marginLeft:5}}>List group item heading</ListHeader>
         </View>
         <ListItemText>

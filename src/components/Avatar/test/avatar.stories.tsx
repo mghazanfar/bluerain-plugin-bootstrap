@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Avatar from '../../Avatar';
+import { Avatar } from '../../Avatar';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Favorite } from 'bluerain-icons';
+// import { Favorite } from 'bluerain-icons';
 import { withKnobs, text, number, object} from '@storybook/addon-knobs';
 const stories = storiesOf('Avatar', module);
 stories.add('Avatar (with knobs)', () => {
@@ -23,13 +23,13 @@ stories.add('Avatar (with Icons)', () => {
     return  (
 <div style={{display:'flex',}}>
     <Avatar style={{backgroundColor:'pink'}}>
-     <Favorite />
+     {/* <Favorite /> */}
     </Avatar>
     <Avatar style={{backgroundColor:'grey'}}>
-     <Favorite />
+     {/* <Favorite /> */}
     </Avatar>
     <Avatar style={{backgroundColor:'green'}}>
-     <Favorite style={{width:55, height: 55}} />
+     {/* <Favorite style={{width:55, height: 55}} /> */}
     </Avatar>
 </div>);
 });

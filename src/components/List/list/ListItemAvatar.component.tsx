@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import { ListItemAvatarProperties } from '@blueeast/bluerain-ui-interfaces';
-import Avatar from '../../Avatar';
+import { Avatar } from '../../Avatar';
 
 /**
  * The props of ListItemAvatar Component

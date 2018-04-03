@@ -13,7 +13,7 @@ import { withBlueRain, BlueRainType } from '@blueeast/bluerain-os';
  */
 
  export interface IBSProps {
-     bluerain?: BlueRainType,
+     bluerain: BlueRainType,
  }
 
 const ListItemRightButton: React.ComponentType<any> = (props: CardFooterProperties & IBSProps) => {

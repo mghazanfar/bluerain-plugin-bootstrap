@@ -1,6 +1,6 @@
 import * as React from 'react';
 import  { ListItemRightButton } from '../../List';
-import Button from '../../Button';
+import { Button } from '../../Button';
 import BR from '@blueeast/bluerain-os';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
