@@ -2,6 +2,7 @@
 
 Adds [bootstrap](http://getbootstrap.com) theme Provider to BlueRain.
 Components of bootstrap have been developed using a common interface.
+[https://blueeast.gitbook.io/bluerain-plugin-bootstrap](https://blueeast.gitbook.io/bluerain-plugin-bootstrap)
 
 ## Usage
 
@@ -10,7 +11,6 @@ Run the following command in the plugin directoy:
 ```shell
 yarn add @blueeast/bluerain-plugin-bootstrap
 ```
-
 
 ## Components
 
@@ -43,7 +43,7 @@ yarn add @blueeast/bluerain-plugin-bootstrap
 
 ### Divider
 
-#### **Props**
+#### **props**
 
 | Name       | Default | Type   | Description                           |
 | ---------- | ------- | ------ | ------------------------------------- |
@@ -51,11 +51,9 @@ yarn add @blueeast/bluerain-plugin-bootstrap
 | component     |         | ReactNode | component to generate Divider with|
 | inset |         | boolean |if true, Divider is generated indented|
 
-
-
 ### TextInput
 
-#### **Props**
+#### **Prop**
 
 | Name       | Default | Type   | Description                           |
 | ---------- | ------- | ------ | ------------------------------------- |
@@ -63,8 +61,6 @@ yarn add @blueeast/bluerain-plugin-bootstrap
 | name     |         | string | The name of TextInput|
 | multiple |         | boolean |textInput having multiple lines like TextArea etc ..|
 | disabled |         | boolean |if true,Input is disabled|
-
-
 
 ## Filters
 
@@ -76,7 +72,7 @@ This plugin provides complete flexibility to modify the material ui theme. This 
 
 ### BootstrapPlugin
 
-### **Extends Plugin**
+### **Extends [Plugin](https://blueeast.gitbook.io/bluerain-os/api/api-reference#plugin)**
 
 Bootstrap Plugin
 
