@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": [
     "@blueeast/tslint-config-blueeast/react"
   ],
@@ -6,4 +7,14 @@
         "max-line-length": { },
         "no-submodule-imports": false   
     }
+=======
+  "extends": ["@blueeast/tslint-config-blueeast/react"],
+  "rules":{
+    "no-implicit-dependencies": [true, "dev"],
+    "max-line-length": [true, 440],
+    "no-var-requires": false,
+    "no-submodule-imports" : false,
+    "jsx-boolean-value" : false
+  }
+>>>>>>> a5325f815057dc12ba2ab481ca691f64a58b06b8
 }
