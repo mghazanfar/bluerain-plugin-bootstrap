@@ -10,6 +10,11 @@ import { TextInput } from './components/TextInput';
 import { Avatar } from './components/Avatar';
 import { Breadcrumb } from './components/Breadcrumb';
 import { Button } from './components/Button';
+import Chip from './components/chip';
+import BadgeUi from './components/badge';
+import MapComponent from './components/map';
+
+
 /**
  * BootstrapPlugin Plugin
  * @property {string} pluginName "BootstrapPlugin"
@@ -39,7 +44,11 @@ class BootstrapPlugin extends Plugin {
 		ListItemRightButton,
 		ListItemText,
 		TextInput,
-		Breadcrumb, // Deprecated, remove in next semver major version
+		Breadcrumb, 
+		Chip,
+		BadgeUi,
+		MapComponent
+		// Deprecated, remove in next semver major version
 	};
 
 	// static hooks = {
@@ -47,6 +56,7 @@ class BootstrapPlugin extends Plugin {
 	// 		BR.Components.addHocs('SystemLayout', withReboot);
 	// 	},
 	// };
+
 }
 
 export default BootstrapPlugin;
