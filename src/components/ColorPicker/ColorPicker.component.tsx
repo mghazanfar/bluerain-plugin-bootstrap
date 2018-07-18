@@ -6,7 +6,7 @@ import { Button } from '../Button';
 import React from 'react';
 
 export interface BSProps extends ColorPickerProperties {
-	value?:{ h?: number, s?: number, l?: number, r?: number, g?: number, b?: number, a?: number } | string,
+	value?:{ h?: number, s?: number, l?: number, r?: number, g?: number, b?: number, a?: number } ,
 	hs: boolean,
 	bluerain: BlueRain;
 }

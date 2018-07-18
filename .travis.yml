@@ -13,6 +13,8 @@ node_js:
   - node
 script:
   - npm run build
+  - test $TRAVIS_BRANCH = "master" && npm run deploy-storybook
+  - test $TRAVIS_BRANCH = "master" && npm run deploy-docs
 after_success:
   - npm run report-coverage
   - npm run deploy-docs
