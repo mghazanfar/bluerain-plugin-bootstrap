@@ -8,4 +8,4 @@ coverage
 dist
 compiled
 .awcache
-test/__snapshots__/
+__snapshots__
